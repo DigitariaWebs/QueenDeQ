@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import Lenis from 'lenis';
+import { useLocation } from 'react-router-dom';
 
 interface SmoothScrollProps {
   children: React.ReactNode;
@@ -7,6 +8,7 @@ interface SmoothScrollProps {
 
 export const SmoothScroll: React.FC<SmoothScrollProps> = ({ children }) => {
   const lenisRef = useRef<Lenis | null>(null);
+  const location = useLocation();
 
   useEffect(() => {
     // Check for reduced motion preference
@@ -37,6 +39,15 @@ export const SmoothScroll: React.FC<SmoothScrollProps> = ({ children }) => {
       lenis.destroy();
     };
   }, []);
+
+  // Scroll to top on route change
+  useEffect(() => {
+    if (lenisRef.current) {
+      lenisRef.current.scrollTo(0, { immediate: true });
+    } else {
+      window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
+    }
+  }, [location]);
 
   // Handle parallax data-speed attributes
   useEffect(() => {

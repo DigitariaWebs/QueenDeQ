@@ -193,7 +193,7 @@ const translations = {
     // Layout/Footer
     'footer.description': 'Un royaume pour les Reines, par des Reines.',
     'footer.navigation': 'Navigation',
-    'footer.copyright': '© 2024 Queen de Q. Tous droits réservés.',
+    'footer.copyright': '© 2025 Queen de Q. Tous droits réservés.',
     'footer.contactForm.title': 'Contactez-nous',
     'footer.contactForm.email': 'Votre email',
     'footer.contactForm.message': 'Votre message',
@@ -638,7 +638,7 @@ const translations = {
     // Layout/Footer
     'footer.description': 'Understand your masculine attraction patterns and transform your romantic relationships.',
     'footer.navigation': 'Navigation',
-    'footer.copyright': '© 2024 Queen de Q. All rights reserved.',
+    'footer.copyright': '© 2025 Queen de Q. All rights reserved.',
     'footer.contactForm.title': 'Contact us',
     'footer.contactForm.email': 'Your email',
     'footer.contactForm.message': 'Your message',

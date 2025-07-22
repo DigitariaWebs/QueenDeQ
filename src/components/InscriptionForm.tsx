@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useTranslation } from '../context/TranslationContext';
 import { X, Crown, Star, Sparkles, CheckCircle, ExternalLink } from 'lucide-react';
+import Lenis from 'lenis';
 
 interface InscriptionFormProps {
   drawnCard: string;
@@ -19,16 +20,52 @@ export const InscriptionForm: React.FC<InscriptionFormProps> = ({
   const [isLoading, setIsLoading] = useState(false);
   const modalRef = useRef<HTMLDivElement>(null);
 
+  // Pause/resume Lenis smooth scroll when modal is open/closed
   useEffect(() => {
+    const lenis = (window as any).lenis as Lenis | undefined;
     if (isVisible) {
       document.body.style.overflow = 'hidden';
+      if (lenis && typeof lenis.stop === 'function') lenis.stop();
+      // Add Escape key listener
+      const handleKeyDown = (e: KeyboardEvent) => {
+        if (e.key === 'Escape') {
+          onClose();
+        }
+      };
+      window.addEventListener('keydown', handleKeyDown);
+      return () => {
+        document.body.style.overflow = 'unset';
+        if (lenis && typeof lenis.start === 'function') lenis.start();
+        window.removeEventListener('keydown', handleKeyDown);
+      };
     } else {
       document.body.style.overflow = 'unset';
+      if (lenis && typeof lenis.start === 'function') lenis.start();
     }
     return () => {
       document.body.style.overflow = 'unset';
+      if (lenis && typeof lenis.start === 'function') lenis.start();
     };
-  }, [isVisible]);
+  }, [isVisible, onClose]);
+
+  // Prevent scroll events from propagating to the background
+  const handleWheel = (e: React.WheelEvent) => {
+    if (modalRef.current && e.target instanceof Node && modalRef.current.contains(e.target)) {
+      // Allow scroll inside modal
+      // But prevent scroll from bubbling to background
+      const el = modalRef.current;
+      const { scrollTop, scrollHeight, clientHeight } = el;
+      const atTop = scrollTop === 0;
+      const atBottom = scrollTop + clientHeight === scrollHeight;
+      if ((atTop && e.deltaY < 0) || (atBottom && e.deltaY > 0)) {
+        e.preventDefault();
+      }
+      e.stopPropagation();
+    } else {
+      e.preventDefault();
+      e.stopPropagation();
+    }
+  };
 
   const handleAcceptanceChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setIsAccepted(e.target.checked);
@@ -66,6 +103,7 @@ export const InscriptionForm: React.FC<InscriptionFormProps> = ({
         exit={{ opacity: 0 }}
         className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-start sm:items-center justify-center p-4 py-8 overflow-y-auto"
         onClick={onClose}
+        onWheel={handleWheel}
       >
         <motion.div
           ref={modalRef}

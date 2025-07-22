@@ -84,7 +84,7 @@ const Apropos: React.FC = () => {
                         <h1 className="font-playlist text-6xl md:text-7xl font-bold text-imperial-gold mb-8">
                             {t('about.title')}
                         </h1>
-                        <p className="text-2xl md:text-3xl font-cinzel italic text-rose-champagne/90 mb-12">
+                        <p className="text-2xl md:text-3xl font-cinzel italic text-imperial-gold mb-12">
                             {t('about.intro.subtitle')}
                         </p>
                         <div className="text-lg md:text-xl text-left space-y-6 text-rose-champagne/80 leading-relaxed font-raleway">
