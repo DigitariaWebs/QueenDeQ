@@ -586,6 +586,8 @@ const translations = {
     'faq.answer3': 'Yes, our patterns evolve over time. Understanding your current attractions helps you make more conscious choices.',
     'faq.question4': 'Is the 2 of Spades really problematic?',
     'faq.answer4': 'The 2 of Spades represents the solar manipulator. Understanding this pattern helps you identify and avoid it in your relationships.',
+    'faq.question6': 'How to use Queen de Q daily?',
+    'faq.answer6': 'Integrate the app into your routine as a moment of connection with yourself. Draw a card when you meet someone new, use the journal to note your observations about your patterns, and consult the Queen Mother when you need advice or healing rituals. The app is designed to be both playful and deeply transformative.',
     
     // How it works
     'howItWorks.title': 'How it works',

@@ -47,7 +47,7 @@ export const Hero: React.FC = () => {
       opacity: 1,
       clipPath: "inset(0 0% 0 0)",
       transition: {
-        duration: 1.2,
+        duration: 0.8,
         ease: [0.76, 0, 0.24, 1]
       }
     }
@@ -64,8 +64,8 @@ export const Hero: React.FC = () => {
       scale: 1,
       filter: "blur(0px)",
       transition: {
-        duration: 0.8,
-        delay: 0.5,
+        duration: 0.5,
+        delay: 0.2,
         ease: "easeOut"
       }
     }
@@ -80,8 +80,8 @@ export const Hero: React.FC = () => {
       opacity: [0, 1, 1, 0],
       y: [-20, -40, -60, -80],
       transition: {
-        duration: 3,
-        delay: 1,
+        duration: 2,
+        delay: 0.5,
         repeat: Infinity,
         repeatType: "loop",
         ease: "easeInOut"
@@ -137,32 +137,46 @@ export const Hero: React.FC = () => {
               {/* Subtitle with Handwriting Effect */}
               <div className="relative mb-6 sm:mb-8 overflow-hidden" style={{ paddingBottom: '1rem' }}>
                 {/* Container for the handwriting effect */}
-                <div className="relative z-10">
-                  {/* Split text into characters for handwriting effect */}
-                  {t('hero.subtitle').split('').map((char, index) => (
-                    <motion.span
-                      key={index}
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{
-                        delay: 1.8 + (index * 0.03), // Stagger the animation for each character
-                        duration: 0.3,
-                        ease: "easeOut"
-                      }}
-                      className="inline-block text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-lovers text-imperial-gold"
-                      style={{
-                        textShadow: "0 0 10px rgba(214, 174, 96, 0.3)",
-                      }}
-                    >
-                      {char === ' ' ? '\u00A0' : char}
-                    </motion.span>
-                  ))}
+                <div className="relative z-10 flex flex-wrap">
+                  {t('hero.subtitle')
+                    .split(' ')
+                    .map((word, wordIdx) => (
+                      <span
+                        key={wordIdx}
+                        className="inline-block whitespace-nowrap mr-3"
+                      >
+                        {word.split('').map((char, charIdx) => {
+                          const globalIdx = t('hero.subtitle')
+                            .split(' ')
+                            .slice(0, wordIdx)
+                            .join(' ').length + wordIdx + charIdx;
+                          return (
+                            <motion.span
+                              key={charIdx}
+                              initial={{ opacity: 0, y: 20 }}
+                              animate={{ opacity: 1, y: 0 }}
+                              transition={{
+                                delay: 0.8 + (globalIdx * 0.02),
+                                duration: 0.2,
+                                ease: "easeOut"
+                              }}
+                              className="inline-block text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-lovers text-imperial-gold"
+                              style={{
+                                textShadow: "0 0 10px rgba(214, 174, 96, 0.3)",
+                              }}
+                            >
+                              {char}
+                            </motion.span>
+                          );
+                        })}
+                      </span>
+                    ))}
                 </div>
                 {/* Decorative underline */}
                 <motion.span
                   initial={{ scaleX: 0 }}
                   animate={{ scaleX: 1 }}
-                  transition={{ delay: 2.2 + (t('hero.subtitle').length * 0.03), duration: 0.6 }}
+                  transition={{ delay: 1.2, duration: 0.4 }}
                   className="absolute left-0 w-full h-0.5 bg-gradient-to-r from-imperial-gold/50 to-transparent transform origin-left"
                   style={{ bottom: '-0.5rem' }}
                 />
@@ -176,7 +190,7 @@ export const Hero: React.FC = () => {
                     initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: -10 }}
-                    transition={{ duration: 0.4, ease: "easeInOut" }}
+                    transition={{ duration: 0.3, ease: "easeInOut" }}
                   >
                     {isDescriptionExpanded ? fullDescription : previewText}
                   </motion.p>

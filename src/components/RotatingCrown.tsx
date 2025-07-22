@@ -34,6 +34,7 @@ export const RotatingCrown: React.FC<RotatingCrownProps> = ({ className = '' }) 
             left: '50%',
             top: '50%',
             transformOrigin: '0 0',
+            transform: `translate(-50%, -50%) translateX(${80 + i * 10}px) translateY(0px)`
           }}
           animate={{
             rotate: 360,
@@ -57,9 +58,6 @@ export const RotatingCrown: React.FC<RotatingCrownProps> = ({ className = '' }) 
               repeat: Infinity,
               delay: i * 0.3,
             },
-          }}
-          style={{
-            transform: `translate(-50%, -50%) translateX(${80 + i * 10}px) translateY(0px)`,
           }}
         />
       ))}

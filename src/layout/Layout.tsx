@@ -285,14 +285,6 @@ export const Layout: React.FC = () => {
                   </Link>
                 </li>
                 <li>
-                  <a href="#royal-wheel" onClick={handleRoyalWheelClick} className="text-rose-champagne hover:text-imperial-gold transition-colors flex items-center justify-center md:justify-start font-raleway cursor-pointer">
-                    <svg className="h-4 w-4 mr-2" viewBox="0 0 24 24" fill="currentColor">
-                      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-5.52 0-10-4.48-10-10S6.48 2 12 2s10 4.48 10 10-4.48 10-10 10zm-1-15h2v6h-2zm0 8h2v2h-2z"/>
-                    </svg>
-                    Roue Royale
-                  </a>
-                </li>
-                <li>
                   <Link to="/apropos" className="text-rose-champagne hover:text-imperial-gold transition-colors flex items-center justify-center md:justify-start font-raleway">
                     <svg className="h-4 w-4 mr-2" viewBox="0 0 24 24" fill="currentColor">
                       <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z" />
