@@ -1,7 +1,16 @@
 import { useTranslation } from '../context/TranslationContext';
+import { useEffect } from 'react';
 
 const PrivacyPolicy = () => {
   const { t } = useTranslation();
+
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: 'instant'
+    });
+  }, []);
 
   return (
     <div className="min-h-screen bg-royal-navy text-white pt-32 pb-20">

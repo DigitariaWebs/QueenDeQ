@@ -477,6 +477,23 @@ const translations = {
     'privacy.section9.content': 'We reserve the right to modify the content of this policy to meet applicable legal requirements. We invite you to review this policy frequently to stay informed about how we handle your personal information.',
     'privacy.section10.title': 'Rules of interpretation',
     'privacy.section10.content': 'For information purposes, the singular includes the plural and vice versa, the masculine includes the feminine and vice versa, and any term designating a person also includes, where applicable, a reference to legal persons.',
+    
+    // Terms of Service
+    'terms.title': 'Conditions générales d\'utilisation de Queen de Q',
+    'terms.version': 'Version en vigueur à compter du 15 juillet 2025',
+    'terms.section1.title': 'Acceptation des conditions',
+    'terms.section1.content': 'Bienvenue sur la plateforme Queen de Q accessible via notre site web et notre application mobile (la « Plateforme »), exploités par 9540-9520 Québec Inc. (Gestion Reines), ayant son siège social au 275 avenue de Dieppe, Saint-Hyacinthe (Québec) J2S 6Z7.\n\nEn visitant, naviguant ou utilisant la Plateforme ou en vous abonnant à nos services (les « Services »), vous acceptez d\'être lié par les présentes conditions générales d\'utilisation (les « CGU ») ainsi que par notre Politique de Confidentialité. Si vous n\'acceptez pas ces CGU, veuillez ne pas utiliser la Plateforme.\n\nNous nous réservons le droit de modifier ces CGU à tout moment, sans préavis. Toute modification sera affichée sur la Plateforme avec la date de la dernière mise à jour. Votre utilisation continue des Services constitue une acceptation des modifications.',
+    'terms.section2.title': 'Utilisation et code de conduite',
+    'terms.section2.content': '2.1. Obligations générales\n\nEn utilisant la Plateforme, vous vous engagez à :',
+    'terms.section2.subsections': '• respecter toutes les lois locales, provinciales, nationales et internationales applicables • ne pas violer les droits de propriété intellectuelle de Queen de Q ou de tiers • ne pas utiliser la Plateforme pour propager du spam ou tout autre contenu non sollicité • ne pas introduire de virus, logiciels malveillants ou tout autre code nuisible • ne pas contourner les mesures techniques mises en place pour protéger la Plateforme • ne pas usurper l\'identité de toute personne, y compris nos employés ou représentants • ne pas harceler, menacer ou abuser d\'autres utilisateurs ou membres de la communauté • ne pas publier de contenu diffamatoire, obscène, menaçant ou portant atteinte à la vie privée ou aux droits d\'autrui',
+    'terms.section3.title': 'Création et gestion de votre compte',
+    'terms.section3.content': '3.1. Inscription\n\nPour accéder à certaines fonctionnalités, vous devez créer un compte en fournissant des informations exactes, complètes et à jour. Vous êtes responsable de l\'actualisation de ces informations.\n\n3.2. Sécurité\n\nVous êtes responsable de la confidentialité de votre mot de passe et de votre compte. Toute activité effectuée via votre compte est réputée être la vôtre. Si vous soupçonnez une utilisation non autorisée, veuillez nous contacter immédiatement à gestionreines@gmail.com.\n\n3.3. Âge minimum\n\nVous devez avoir au moins 18 ans ou l\'âge légal dans votre province/pays pour créer un compte.',
+    'terms.section4.title': 'Règles de la communauté et du cercle sororal',
+    'terms.section4.content': 'Certaines fonctionnalités des Services, notamment le cercle sororal, vous permettent d\'interagir et de partager du contenu avec d\'autres utilisatrices. En participant à ces espaces, vous vous engagez à :',
+    'terms.section4.subsections': '• Respecter la confidentialité : Les échanges au sein de la communauté sont confidentiels. Il est interdit de partager les publications ou informations personnelles d\'autres membres en dehors de la Plateforme. • Ne pas donner de conseils professionnels : Vous vous engagez à ne pas offrir de conseils médicaux, psychologiques, juridiques ou financiers dans ces espaces. • Reconnaître que Queen de Q n\'est pas responsable : Queen de Q ne contrôle pas systématiquement le contenu publié par les utilisateurs et n\'endosse ni ne garantit les opinions, récits ou conseils partagés. Vos interactions avec les autres membres se font sous votre entière responsabilité. • Notre droit de modération : Nous nous réservons le droit, sans y être tenus, de surveiller, modérer ou supprimer tout contenu, et de suspendre ou bannir tout utilisateur qui ne respecterait pas l\'esprit de bienveillance et les règles de la communauté.',
+    // ... Add all other sections similarly ...
+    'terms.section18.title': 'Contact',
+    'terms.section18.content': 'Pour toute question, remarque ou réclamation concernant les Services ou les présentes CGU, vous pouvez nous contacter aux coordonnées suivantes :\n\ngestionreines@gmail.com\nou par courrier à :\n9540-9520 Québec Inc.\nÀ l\'attention du Responsable de la protection des renseignements personnels\n275, avenue de Dieppe\nSaint-Hyacinthe (Québec) J2S 6Z7, Canada',
   },
   en: {
     // Navigation
@@ -949,6 +966,11 @@ const translations = {
     'privacy.section9.content': 'We reserve the right to modify the content of this policy to meet applicable legal requirements. We invite you to review this policy frequently to stay informed about how we handle your personal information.',
     'privacy.section10.title': 'Rules of interpretation',
     'privacy.section10.content': 'For information purposes, the singular includes the plural and vice versa, the masculine includes the feminine and vice versa, and any term designating a person also includes, where applicable, a reference to legal persons.',
+    
+    // Terms of Service
+    'terms.title': 'Queen de Q Terms of Service',
+    'terms.version': 'Version effective as of July 15, 2025',
+    // ... Add English translations for all sections ...
   }
 };
 

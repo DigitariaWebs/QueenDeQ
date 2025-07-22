@@ -7,6 +7,7 @@ import { Application } from './pages/Application';
 import Apropos from './pages/Apropos';
 import ScrollToTop from './components/ScrollToTop';
 import PrivacyPolicy from './pages/PrivacyPolicy';
+import TermsOfService from './pages/TermsOfService';
 // import { Quiz } from './pages/Quiz';
 // import { Chat } from './pages/Chat';
 // import { Journal } from './pages/Journal';
@@ -24,6 +25,7 @@ function App() {
             <Route path="application" element={<Application />} />
             <Route path="apropos" element={<Apropos />} />
             <Route path="politique-confidentialite" element={<PrivacyPolicy />} />
+            <Route path="conditions-utilisation" element={<TermsOfService />} />
             {/* <Route path="quiz" element={<Quiz />} /> */}
             {/* <Route path="chat" element={<Chat />} /> */}
             {/* <Route path="journal" element={<Journal />} /> */}

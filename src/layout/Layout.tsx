@@ -339,12 +339,15 @@ export const Layout: React.FC = () => {
                 >
                   {t('footer.privacyComingSoon')}
                 </Link>
-                <button 
-                  onClick={(e) => { e.preventDefault(); alert('Les conditions d\'utilisation seront disponibles prochainement.'); }}
-                  className="text-rose-champagne/60 hover:text-imperial-gold text-sm transition-colors font-raleway cursor-pointer"
+                <Link 
+                  to="/conditions-utilisation"
+                  className="text-rose-champagne/60 hover:text-imperial-gold text-sm transition-colors font-raleway"
+                  onClick={() => {
+                    window.scrollTo(0, 0);
+                  }}
                 >
                   {t('footer.termsComingSoon')}
-                </button>
+                </Link>
                 <p className="text-rose-champagne/60 text-sm">
                   {t('footer.rights')}
                 </p>
