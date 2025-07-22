@@ -62,6 +62,19 @@ export default {
         'gradient-gold': 'linear-gradient(135deg, #D6AE60 0%, #C8A96B 50%, #B79D74 100%)',
         'gradient-rose': 'linear-gradient(135deg, #D4B5A5 0%, #E8C5C1 50%, #E3BBB2 100%)',
         'gradient-radial': 'radial-gradient(ellipse at center, var(--tw-gradient-stops))',
+      },
+      // Add 3D transform utilities
+      perspective: {
+        '1000': '1000px',
+      },
+      transformStyle: {
+        'preserve-3d': 'preserve-3d',
+      },
+      backfaceVisibility: {
+        'hidden': 'hidden',
+      },
+      rotate: {
+        'y-180': 'rotateY(180deg)',
       }
     },
   },

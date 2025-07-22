@@ -708,6 +708,54 @@ a:focus {
   transform: rotateY(180deg);
 }
 
+/* 3D Card Flipping - Enhanced */
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.transform-style-preserve-3d {
+  transform-style: preserve-3d;
+}
+
+.backface-hidden {
+  backface-visibility: hidden !important;
+  -webkit-backface-visibility: hidden !important;
+  -moz-backface-visibility: hidden !important;
+}
+
+.rotate-y-180 {
+  transform: rotateY(180deg);
+}
+
+/* Mystery Card 3D Effect - More specific rules */
+.mystery-card-particles {
+  perspective: 1000px;
+}
+
+.mystery-card-particles>div {
+  transform-style: preserve-3d !important;
+}
+
+.mystery-card-particles .absolute {
+  backface-visibility: hidden !important;
+  -webkit-backface-visibility: hidden !important;
+  -moz-backface-visibility: hidden !important;
+}
+
+/* Ensure the front face is visible by default */
+.mystery-card-particles .absolute:first-child {
+  transform: rotateY(0deg);
+}
+
+/* Ensure the back face is rotated and hidden by default */
+.mystery-card-particles .absolute:last-child {
+  transform: rotateY(180deg) !important;
+}
+
+/* Force proper 3D context */
+.mystery-card-particles [class*="transform-style-preserve-3d"] {
+  transform-style: preserve-3d !important;
+}
 /* Animation des confessions */
 @keyframes confession-reveal {
   0% {

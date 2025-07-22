@@ -107,7 +107,7 @@ const MysteryCard = ({ icon, title, description, index }: { icon: JSX.Element, t
 
   return (
     <motion.div 
-      className="relative aspect-[3/5] w-72 cursor-pointer perspective-1000 mystery-card-particles rounded-2xl overflow-hidden"
+      className="relative aspect-[3/5] w-72 cursor-pointer mystery-card-particles rounded-2xl overflow-hidden"
       initial={{ opacity: 0, y: 50, rotateZ: (index - 1) * 5 }}
       whileInView={{ opacity: 1, y: 0, rotateZ: (index - 1) * 2 }}
       whileHover={{ 
@@ -121,13 +121,21 @@ const MysteryCard = ({ icon, title, description, index }: { icon: JSX.Element, t
       onMouseEnter={() => setIsFlipped(true)}
       onMouseLeave={() => setIsFlipped(false)}
     >
-      <div 
+      <div
         className={`relative w-full h-full transition-transform duration-700 transform-style-preserve-3d ${
           isFlipped ? 'rotate-y-180' : ''
         }`}
+        style={{ transformStyle: 'preserve-3d' }}
       >
         {/* Face avant - Titre et icône */}
-        <div className="absolute inset-0 w-full h-full bg-gradient-to-br from-ink-black/80 via-royal-purple/60 to-ink-black/90 backdrop-blur-md rounded-2xl p-6 flex flex-col justify-center items-center text-center gilded-finish backface-hidden border border-imperial-gold/30 shadow-2xl">
+        <div 
+          className="absolute inset-0 w-full h-full bg-gradient-to-br from-ink-black/80 via-royal-purple/60 to-ink-black/90 backdrop-blur-md rounded-2xl p-6 flex flex-col justify-center items-center text-center gilded-finish backface-hidden border border-imperial-gold/30 shadow-2xl"
+          style={{ 
+            backfaceVisibility: 'hidden',
+            WebkitBackfaceVisibility: 'hidden',
+            transform: 'rotateY(0deg)'
+          }}
+        >
           <div className="text-imperial-gold mb-4 transform transition-all duration-300 hover:scale-110 hover:text-rose-champagne">
             {icon}
           </div>
@@ -143,7 +151,14 @@ const MysteryCard = ({ icon, title, description, index }: { icon: JSX.Element, t
         </div>
 
         {/* Face arrière - Description */}
-        <div className="absolute inset-0 w-full h-full bg-gradient-to-br from-imperial-gold/90 via-rose-champagne/80 to-imperial-gold/90 backdrop-blur-md rounded-2xl p-6 flex flex-col justify-center items-center text-center rotate-y-180 backface-hidden border border-imperial-gold/50 shadow-2xl">
+        <div 
+          className="absolute inset-0 w-full h-full bg-gradient-to-br from-imperial-gold/90 via-rose-champagne/90 to-imperial-gold/90 backdrop-blur-md rounded-2xl p-6 flex flex-col justify-center items-center text-center backface-hidden border border-imperial-gold/30 shadow-2xl"
+          style={{ 
+            backfaceVisibility: 'hidden',
+            WebkitBackfaceVisibility: 'hidden',
+            transform: 'rotateY(180deg)'
+          }}
+        >
           <div className="text-royal-purple mb-4 transform scale-90 transition-transform duration-300">
             {icon}
           </div>

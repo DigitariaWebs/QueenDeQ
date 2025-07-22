@@ -5,6 +5,7 @@ import { LanguageSwitcher } from '../components/LanguageSwitcher';
 import { LiveTeaBanner } from '../components/LiveTeaBanner';
 import { InscriptionForm } from '../components/InscriptionForm';
 import { useTranslation } from '../context/TranslationContext';
+import KingdomInvitation from '../components/KingdomInvitation';
 
 export const Layout: React.FC = () => {
   const { t } = useTranslation();
@@ -54,8 +55,9 @@ export const Layout: React.FC = () => {
 
   return (
     <>
+      <KingdomInvitation />
       <header 
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
           isScrolled 
             ? 'bg-gradient-to-b from-black/40 via-royal-purple/30 to-transparent backdrop-blur-md py-2 shadow-lg shadow-black/10' 
             : 'bg-gradient-to-b from-black/20 via-royal-purple/10 to-transparent py-3'

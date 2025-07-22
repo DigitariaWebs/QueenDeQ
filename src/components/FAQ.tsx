@@ -117,7 +117,7 @@ export const FAQ: React.FC = () => {
                 {index + 1}
               </div>
 
-              <h3 className="text-xl sm:text-2xl font-cinzel font-bold text-imperial-gold mb-6 group-hover:text-yellow-300 transition-colors relative z-10">
+              <h3 className="text-3xl sm:text-4xl lg:text-5xl font-lovers font-bold text-imperial-gold mb-6 group-hover:text-yellow-300 transition-colors relative z-10">
                 {item.question}
               </h3>
               <p className="text-rose-champagne/90 leading-relaxed text-base sm:text-lg relative z-10 font-raleway">
