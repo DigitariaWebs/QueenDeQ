@@ -1,0 +1,9 @@
+{
+  "framework": "vite",
+  "buildCommand": "npm run build",
+  "installCommand": "npm ci",
+  "env": {
+    "NODE_ENV": "production",
+    "VITE_BUILD_TARGET": "vercel"
+  }
+} 

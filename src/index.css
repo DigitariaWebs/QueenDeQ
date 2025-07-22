@@ -1,0 +1,809 @@
+/* Import Google fonts for Cinzel and Raleway */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Raleway:wght@300;400;500;600;700&display=swap');
+
+/* Local fonts */
+@font-face {
+  font-family: 'Playlist';
+  src: url('/assets/fonts/Playlist Script.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Playlist Caps';
+  src: url('/assets/fonts/Playlist Caps.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Base font styles */
+@layer base {
+  html {
+    font-family: 'Raleway', sans-serif;
+  }
+  
+  h1, .h1 {
+    font-family: 'Playlist', sans-serif;
+  }
+  
+  h2, h3, .h2, .h3 {
+    font-family: 'Cinzel', serif;
+  }
+}
+
+/* Animations de transition de langue */
+.fade-enter {
+  opacity: 0;
+}
+.fade-enter-active {
+  opacity: 1;
+  transition: opacity 300ms ease-in;
+}
+.fade-exit {
+  opacity: 1;
+}
+.fade-exit-active {
+  opacity: 0;
+  transition: opacity 300ms ease-out;
+}
+
+/* Custom 3D deck animations (simplifiées) */
+.deck-container.is-single {
+  transform: scale(1.05);
+}
+
+.deck-container.is-single .absolute {
+  transform: translateZ(0px);
+  background: linear-gradient(135deg, theme('colors.imperial-gold'), theme('colors.rose-champagne'));
+  border-color: theme('colors.imperial-gold');
+}
+
+/* Animations essentielles */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.6s ease-out forwards;
+}
+
+@keyframes bounce-slow {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-bounce-slow {
+  animation: bounce-slow 3s ease-in-out infinite;
+}
+
+@keyframes gentle-pulse {
+  0%, 100% { opacity: 0.7; }
+  50% { opacity: 1; }
+}
+
+/* Glassmorphism utility */
+.glass {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+/* Velvet texture overlay (simplifiée) */
+.velvet-bg::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 50%, rgba(214, 174, 96, 0.05) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+/* Scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Focus styles */
+.focus-ring:focus-visible {
+  outline: 2px solid theme('colors.imperial-gold');
+  outline-offset: 2px;
+}
+
+/* Simple button ripple effect */
+.button-ripple {
+  position: relative;
+  overflow: hidden;
+}
+
+.button-ripple::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  transform: scale(0);
+  background: theme('colors.imperial-gold / 20%');
+  transition: transform 0.3s ease;
+  pointer-events: none;
+}
+
+.button-ripple:hover::after {
+  transform: scale(1.1);
+}
+
+/* Mobile optimizations */
+@media (max-width: 640px) {
+  .deck-container {
+    transform-style: preserve-3d;
+  }
+  
+  html {
+    -webkit-text-size-adjust: 100%;
+  }
+}
+
+/* Flip animation for cards */
+@keyframes rotate-y-180 {
+  from { transform: rotateY(0deg); }
+  to { transform: rotateY(180deg); }
+}
+
+.transform-style-preserve-3d {
+  transform-style: preserve-3d;
+}
+
+.rotate-y-180 {
+  transform: rotateY(180deg);
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+}
+
+/* Styles pour les cartes */
+.card-container {
+  transition: all 0.3s ease;
+  min-height: 120px;
+  border: 2px solid rgba(214, 174, 96, 0.3);
+  box-shadow: 
+    0 4px 15px rgba(214, 174, 96, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.card-container:hover {
+  transform: translateY(-4px);
+  box-shadow: 
+    0 12px 30px rgba(214, 174, 96, 0.3),
+    0 0 25px rgba(255, 215, 0, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 215, 0, 0.6);
+}
+
+.card-container img {
+  transition: transform 0.3s ease;
+}
+
+.card-inner {
+  transition: transform 0.5s ease;
+  transform-style: preserve-3d;
+}
+
+/* Responsive adjustments */
+@media (min-width: 640px) {
+  .card-container {
+    min-height: 140px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .card-container {
+    min-height: 160px;
+  }
+}
+
+/* Exit button styles (simplifiés) */
+.exit-button {
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.exit-button:hover {
+  transform: rotate(90deg) scale(1.1);
+  color: theme('colors.red.500');
+}
+
+/* Styles d'accessibilité */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  
+  .card-container:hover {
+    transform: none;
+  }
+}
+
+/* Styles de base */
+body {
+  font-family: theme('fontFamily.raleway'); /* Raleway pour le texte de base */
+  background-color: theme('colors.inked-indigo');
+  color: theme('colors.rose-champagne');
+  line-height: 1.6;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Hiérarchie typographique selon les demandes du client */
+h1, .heading-primary {
+  font-family: theme('fontFamily.playlist'); /* Playlist pour les titres principaux */
+  font-weight: 700;
+  line-height: 1.4 !important; /* Augmenté davantage pour éviter la coupure des caractères descendants */
+  padding-bottom: 0.4em !important; /* Plus d'espace pour les caractères descendants */
+  overflow: visible !important; /* Assure que les caractères descendants ne sont pas coupés */
+}
+
+h2, h3, .heading-secondary {
+  font-family: theme('fontFamily.cinzel'); /* Cinzel pour les titres de second niveau */
+  font-weight: 600;
+}
+
+h4, h5, h6, .heading-tertiary {
+  font-family: theme('fontFamily.cinzel');
+  font-weight: 500;
+}
+
+p, span, .text-body {
+  font-family: theme('fontFamily.raleway'); /* Raleway pour le texte courant */
+}
+
+/* Focus accessibility */
+button:focus,
+a:focus {
+  outline: 2px solid theme('colors.imperial-gold');
+  outline-offset: 2px;
+}
+
+/* Corrections spécifiques pour la police Playlist */
+.font-playlist {
+  line-height: 1.4 !important; /* Augmenté davantage pour éviter la coupure */
+  padding-bottom: 0.3em !important; /* Plus d'espace pour les caractères descendants */
+  overflow: visible !important; /* Assure que les caractères descendants ne sont pas coupés */
+  margin-bottom: 0.2em !important; /* Espace supplémentaire en bas */
+}
+
+/* Corrections pour les conteneurs de texte Playlist */
+.font-playlist,
+*[style*="Playlist"] {
+  line-height: 1.4 !important;
+  padding-bottom: 0.3em !important;
+  overflow: visible !important;
+  margin-bottom: 0.2em !important;
+}
+
+/* Corrections pour les titres avec gradients */
+.font-playlist.bg-clip-text {
+  padding-bottom: 0.2em;
+  margin-bottom: 0.1em;
+}
+
+/* Corrections pour les titres de différentes tailles */
+.font-playlist.text-4xl,
+.font-playlist.text-5xl,
+.font-playlist.text-6xl,
+.font-playlist.text-7xl,
+.font-playlist.text-8xl {
+  padding-bottom: 0.4em !important;
+  line-height: 1.3 !important;
+  margin-bottom: 0.3em !important;
+}
+
+/* Corrections pour les conteneurs avec overflow */
+.font-playlist * {
+  overflow: visible;
+}
+
+/* Corrections pour les éléments avec des transformations */
+.font-playlist[style*="transform"],
+.font-playlist.transform {
+  padding-bottom: 0.4em !important;
+}
+
+/* Correction spécifique pour le Hero et les gros titres */
+.font-playlist.text-4xl,
+.font-playlist.text-5xl,
+.font-playlist.text-6xl,
+.font-playlist.text-7xl {
+  padding-bottom: 0.5em !important;
+  line-height: 1.35 !important;
+  overflow: visible !important;
+}
+
+/* Correction pour les conteneurs avec bg-clip-text */
+.bg-clip-text.font-playlist {
+  padding-bottom: 0.4em !important;
+  margin-bottom: 0.3em !important;
+}
+
+/* Correction universelle pour tous les éléments Playlist */
+*[class*="font-playlist"] {
+  line-height: 1.4 !important;
+  padding-bottom: 0.3em !important;
+  overflow: visible !important;
+  text-overflow: clip !important;
+  white-space: normal !important;
+}
+
+/* Correction pour les navigateurs WebKit */
+@supports (-webkit-background-clip: text) {
+  .font-playlist {
+    padding-bottom: 0.5em !important;
+    line-height: 1.4 !important;
+  }
+}
+
+/* Correction finale pour forcer l'affichage des caractères descendants */
+.font-playlist,
+.font-playlist * {
+  box-sizing: content-box !important;
+  padding-bottom: 0.4em !important;
+  margin-bottom: 0.2em !important;
+  overflow: visible !important;
+  line-height: 1.4 !important;
+}
+
+/* Correction spécifique pour les gros titres avec gradient */
+.font-playlist.text-6xl,
+.font-playlist.text-7xl,
+.font-playlist.text-8xl {
+  padding-bottom: 0.6em !important;
+  line-height: 1.35 !important;
+  overflow: visible !important;
+  display: block !important;
+}
+
+/* Correction pour les conteneurs de titres */
+.font-playlist[class*="text-"] {
+  margin-bottom: 1rem !important;
+  padding-bottom: 0.5em !important;
+}
+
+/* Correction pour éviter les coupures par les éléments suivants */
+.font-playlist + * {
+  margin-top: 0.5rem !important;
+}
+
+/* === EFFETS DE DORURE LUXUEUX === */
+
+/* Finition dorée pour les éléments importants */
+.gilded-finish {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid transparent;
+  background-clip: padding-box; /* Important pour que le background ne dépasse pas sous la bordure */
+  z-index: 1;
+}
+
+/* Bordure en dégradé doré */
+.gilded-finish::before {
+  content: '';
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+  z-index: -1;
+  margin: -1px; /* Évite le décalage dû à la bordure parente */
+  border-radius: inherit; /* Utilise le radius du parent */
+  background: linear-gradient(145deg, 
+    theme('colors.imperial-gold / 60%'), 
+    theme('colors.smoky-gold / 30%'), 
+    theme('colors.rose-champagne / 50%'), 
+    theme('colors.imperial-gold / 60%')
+  );
+}
+
+/* Effet de reflet lumineux au survol */
+.gilded-finish::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -150%;
+  width: 100%;
+  height: 100%;
+  transform: skewX(-25deg);
+  background: linear-gradient(
+    to right,
+    transparent 0%,
+    rgba(255, 255, 255, 0.25) 50%,
+    transparent 100%
+  );
+  transition: left 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.gilded-finish:hover::after {
+  left: 150%;
+}
+
+/* Dorure pour les cartes avec effet de reflet doré */
+.card-luxury {
+  position: relative;
+  overflow: hidden;
+}
+
+.card-luxury::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg, 
+    rgba(214, 174, 96, 0.8) 0%, 
+    rgba(255, 215, 0, 0.9) 25%, 
+    rgba(214, 174, 96, 0.8) 50%, 
+    rgba(255, 215, 0, 0.9) 75%, 
+    rgba(214, 174, 96, 0.8) 100%);
+  border-radius: inherit;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.card-luxury:hover::before {
+  opacity: 1;
+}
+
+.card-luxury::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, 
+    transparent 0%, 
+    rgba(255, 215, 0, 0.4) 50%, 
+    transparent 100%);
+  transition: left 0.6s ease;
+  pointer-events: none;
+}
+
+.card-luxury:hover::after {
+  left: 100%;
+}
+
+/* Dorure pour les boutons avec effet brillant */
+.button-luxury {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, 
+    #D6AE60 0%, 
+    #FFD700 25%, 
+    #D6AE60 50%, 
+    #FFD700 75%, 
+    #D6AE60 100%);
+  background-size: 300% 300%;
+  animation: shimmer-gold 3s ease-in-out infinite;
+  box-shadow: 
+    0 0 20px rgba(214, 174, 96, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3);
+  border: 2px solid rgba(255, 215, 0, 0.6);
+  transition: all 0.3s ease;
+}
+
+.button-luxury:hover {
+  box-shadow: 
+    0 0 30px rgba(214, 174, 96, 0.6),
+    0 0 40px rgba(255, 215, 0, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.4);
+  transform: translateY(-2px);
+  border-color: rgba(255, 215, 0, 0.9);
+}
+
+.button-luxury::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, 
+    transparent 0%, 
+    rgba(255, 255, 255, 0.4) 50%, 
+    transparent 100%);
+  transition: left 0.5s ease;
+}
+
+.button-luxury:hover::before {
+  left: 100%;
+}
+
+/* Animation de scintillement doré */
+@keyframes shimmer-gold {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Effet de lustre métallique pour les bordures */
+.golden-border {
+  border: 3px solid transparent;
+  background: linear-gradient(white, white) padding-box,
+              linear-gradient(45deg, 
+                #D6AE60, 
+                #FFD700, 
+                #D6AE60, 
+                #B8860B, 
+                #D6AE60) border-box;
+  border-radius: 12px;
+  position: relative;
+}
+
+.golden-border::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  padding: 3px;
+  background: linear-gradient(45deg, 
+    rgba(214, 174, 96, 0.8), 
+    rgba(255, 215, 0, 0.9), 
+    rgba(214, 174, 96, 0.8));
+  border-radius: inherit;
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: xor;
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+}
+
+/* Particules dorées flottantes */
+.golden-particles {
+  position: relative;
+}
+
+.golden-particles::before,
+.golden-particles::after {
+  content: '✨';
+  position: absolute;
+  color: rgba(214, 174, 96, 0.6);
+  font-size: 12px;
+  pointer-events: none;
+  animation: float-sparkle 3s ease-in-out infinite;
+}
+
+.golden-particles::before {
+  top: 10%;
+  left: 15%;
+  animation-delay: 0s;
+}
+
+.golden-particles::after {
+  bottom: 15%;
+  right: 20%;
+  animation-delay: 1.5s;
+}
+
+@keyframes float-sparkle {
+  0%, 100% { 
+    opacity: 0;
+    transform: translateY(0) scale(0.8);
+  }
+  50% { 
+    opacity: 1;
+    transform: translateY(-10px) scale(1.2);
+  }
+}
+
+/* Shimmer effect for inputs */
+@keyframes shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+.shimmer-effect {
+  animation: shimmer 2s infinite;
+}
+
+/* Animations pour les particules flottantes */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px) scale(1);
+    opacity: 0.7;
+  }
+  25% {
+    transform: translateY(-10px) scale(1.1);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(-20px) scale(0.9);
+    opacity: 0.8;
+  }
+  75% {
+    transform: translateY(-15px) scale(1.05);
+    opacity: 0.9;
+  }
+}
+
+.floating-particle {
+  animation: float 6s ease-in-out infinite;
+}
+
+.floating-particle:nth-child(2) {
+  animation-delay: 1s;
+}
+
+.floating-particle:nth-child(3) {
+  animation-delay: 2s;
+}
+
+.floating-particle:nth-child(4) {
+  animation-delay: 3s;
+}
+
+.floating-particle:nth-child(5) {
+  animation-delay: 4s;
+}
+
+.floating-particle:nth-child(6) {
+  animation-delay: 5s;
+}
+
+/* Animations mystiques pour les sections créatives */
+@keyframes draw {
+  0% {
+    stroke-dashoffset: 100;
+  }
+  50% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: -100;
+  }
+}
+
+/* Animation pour les particules des sections */
+@keyframes mystical-float {
+  0%, 100% {
+    transform: translateY(0px) translateX(0px) rotate(0deg);
+    opacity: 0.6;
+  }
+  25% {
+    transform: translateY(-15px) translateX(8px) rotate(2deg);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(-8px) translateX(-8px) rotate(-2deg);
+    opacity: 0.8;
+  }
+  75% {
+    transform: translateY(-20px) translateX(5px) rotate(1deg);
+    opacity: 0.9;
+  }
+}
+
+.animate-float {
+  animation: mystical-float 5s ease-in-out infinite;
+}
+
+/* Classes utilitaires pour les effets 3D des cartes flip */
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+
+.transform-style-preserve-3d {
+  transform-style: preserve-3d;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+}
+
+.rotate-y-180 {
+  transform: rotateY(180deg);
+}
+
+/* Animation pour les cartes mystères */
+@keyframes card-flip {
+  0% { transform: rotateY(0deg); }
+  50% { transform: rotateY(-90deg) scale(1.1); }
+  100% { transform: rotateY(-180deg); }
+}
+
+@keyframes card-flip-back {
+  0% { transform: rotateY(-180deg); }
+  50% { transform: rotateY(-90deg) scale(1.1); }
+  100% { transform: rotateY(0deg); }
+}
+
+.mystery-card-flip {
+  animation: card-flip 0.7s ease-in-out forwards;
+}
+
+.mystery-card-flip-back {
+  animation: card-flip-back 0.7s ease-in-out forwards;
+}
+
+/* Effet de particules dorées pour les cartes */
+.mystery-card-particles::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg, transparent, rgba(214, 174, 96, 0.3), transparent);
+  border-radius: inherit;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.mystery-card-particles:hover::before {
+  opacity: 1;
+}
+
+.flip-card-front {
+  backface-visibility: hidden;
+}
+
+.flip-card-back {
+  backface-visibility: hidden;
+}
+
+/* Animation des confessions */
+@keyframes confession-reveal {
+  0% {
+    opacity: 0;
+    transform: translateY(30px) scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.confession-card {
+  animation: confession-reveal 0.8s ease-out forwards;
+}
+
+/* Custom scrollbar for a more themed look */
+.scrollbar-thin {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(214, 174, 96, 0.4) transparent;
+}
+
+.scrollbar-thin::-webkit-scrollbar {
+  width: 8px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background-color: rgba(214, 174, 96, 0.4);
+  border-radius: 20px;
+  border: 3px solid transparent;
+} 
