@@ -330,12 +330,15 @@ export const Layout: React.FC = () => {
                 {t('footer.copyright')}
               </p>
               <div className="flex space-x-6">
-                <button 
-                  onClick={(e) => { e.preventDefault(); alert('La politique de confidentialité sera disponible prochainement.'); }} 
-                  className="text-rose-champagne/60 hover:text-imperial-gold text-sm transition-colors font-raleway cursor-pointer"
+                <Link 
+                  to="/politique-confidentialite"
+                  className="text-rose-champagne/60 hover:text-imperial-gold text-sm transition-colors font-raleway"
+                  onClick={() => {
+                    window.scrollTo(0, 0);
+                  }}
                 >
                   {t('footer.privacyComingSoon')}
-                </button>
+                </Link>
                 <button 
                   onClick={(e) => { e.preventDefault(); alert('Les conditions d\'utilisation seront disponibles prochainement.'); }}
                   className="text-rose-champagne/60 hover:text-imperial-gold text-sm transition-colors font-raleway cursor-pointer"
