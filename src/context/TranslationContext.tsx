@@ -147,6 +147,7 @@ const translations = {
     // How it works
     'howItWorks.title': 'C\'est quoi, Queen de Q?',
     'howItWorks.subtitle': 'Ouvre les portes du royaume',
+    'howItWorks.hoverToReveal': 'Survoler pour découvrir',
     'howItWorks.step1.title': 'Une application',
     'howItWorks.step1.description': 'Une application de développement personnel féministe avec humour et bienveillance.',
     'howItWorks.step1.backText': 'Une application de développement personnel féministe avec humour et bienveillance.',
@@ -501,10 +502,10 @@ const translations = {
     'nav.cards': 'The Cabinet of Curiosities',
     'nav.apropos': 'About',
     'nav.application': 'The Application',
-    'nav.quiz': 'Quiz',
-    'nav.chat': 'Chat',
-    'nav.journal': 'Journal',
-    'nav.shop': 'Shop',
+    'nav.quiz': 'Your Inner Queen',
+    'nav.chat': 'Tea Room',
+    'nav.journal': 'Royal Journal',
+    'nav.shop': 'Royal Boutique',
     
     // Shop - Updated for new products
     'shop.title': 'Queen de Q Boutique',
@@ -598,7 +599,7 @@ const translations = {
     'cards.returnHome': 'Back to home',
     
     // Hero section
-    'hero.title': 'Queen de Q',
+    'hero.title': 'Welcome to your kingdom, Queen!',
     'hero.subtitle': 'Understand your masculine attraction patterns',
     'hero.description': 'Discover the archetypes of men you attract and transform your romantic relationships.',
     'hero.spotsLeft': 'spots left',
@@ -621,7 +622,7 @@ const translations = {
     
     // FAQ
     'faq.title': 'Frequently Asked Questions',
-    'faq.subtitle': 'Everything you need to know about masculine archetypes',
+    'faq.subtitle': 'Everything you need to know to reign over your kingdom.',
     'faq.question1': 'How do masculine archetypes work?',
     'faq.answer1': 'Our system identifies patterns of men you usually attract in your relationships, based on traditional playing cards.',
     'faq.question2': 'How many archetypes are there?',
@@ -840,13 +841,13 @@ const translations = {
     'app.subtitle': 'THE APPLICATION',
     'app.scroll': 'Discover the secrets',
     'app.intro.title': 'All of you is complete',
-    'app.intro.p1': 'You have deconstructed. Analyzed. Too much.',
-    'app.intro.p2': 'You have been gentle, strong, accommodating, sexy, brilliant... sometimes all at the same time.',
-    'app.intro.p3': 'And you still got played by twos of spades.',
-    'app.intro.p4': 'Queen de Q is the end of the bluff.',
-    'app.intro.p5': 'It\'s the beginning of a game where we choose our rules, our cards, our truth.',
-    'app.intro.p6': 'Not to please. To crown ourselves.',
-    'app.intro.p7': 'Download the application and crown yourself!',
+    'app.intro.p1': 'You\'ve been there - deconstructing. Analyzing. Maybe too much.',
+    'app.intro.p2': 'Sweet, strong, flexible, sexy, brilliant... sometimes all at once, right?',
+    'app.intro.p3': 'And still, those toxic relationships found their way in (you know, those twos of spades 😉).',
+    'app.intro.p4': 'Here\'s the thing - Queen de Q is where the bluffing ends.',
+    'app.intro.p5': 'Time to play by our rules, pick our cards, own our truth.',
+    'app.intro.p6': 'Not to please anyone. To crown ourselves.',
+    'app.intro.p7': 'Ready to claim your crown? Download now!',
     'app.features.title': 'The Queen de Q application is...',
     'app.feature1.title': 'Your Draw',
     'app.feature1.desc': 'By answering a few questions from the Queen Mother, discover which male archetype is your ex, your lover, or your prospect. The stronger the card, the more emotionally mature he is: it\'s not for nothing that we deserve a King!',
@@ -1016,7 +1017,7 @@ export function TranslationProvider({ children }: TranslationProviderProps) {
 
   // Translation function
   const t = (key: TranslationKey, variables?: Record<string, any>): string => {
-    let translation = translations[language][key] || translations.fr[key] || String(key);
+    let translation = (translations[language] as Record<TranslationKey, string>)[key] || translations.fr[key] || String(key);
     
     // Replace variables in translation
     if (variables) {

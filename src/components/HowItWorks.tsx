@@ -91,19 +91,31 @@ export const HowItWorks: React.FC = () => {
           {steps.map((step, index) => (
             <div
               key={index}
-              className="magic-step-card group"
+              className="magic-step-card group h-80"
             >
-              <div className="h-full p-8 rounded-2xl bg-gradient-to-br from-black via-royal-purple/30 to-black border border-imperial-gold/30 hover:border-imperial-gold/60 transition-all duration-500 shadow-lg hover:shadow-imperial-gold/20">
-                <div className="text-center h-full flex flex-col justify-center space-y-6">
-                  <h3 className="text-2xl sm:text-3xl font-playlist font-bold text-imperial-gold group-hover:text-yellow-300 transition-colors">
-                    {step.title}
-                  </h3>
-                  <p className="text-rose-champagne/80 leading-relaxed font-raleway">
-                    {step.description}
-                  </p>
-                  <p className="text-imperial-gold/70 text-sm italic font-raleway">
-                    {step.backText}
-                  </p>
+              <div className="relative w-full h-full perspective-1000 group">
+                {/* Card Front */}
+                <div className="absolute inset-0 p-8 rounded-2xl bg-gradient-to-br from-black via-royal-purple/30 to-black border border-imperial-gold/30 shadow-lg backface-hidden transition-transform duration-700 ease-in-out group-hover:rotate-y-180">
+                  <div className="text-center h-full flex flex-col justify-center items-center">
+                    {/* Crown Icon */}
+                    
+                    <h3 className="text-2xl sm:text-3xl font-playlist font-bold text-imperial-gold group-hover:text-yellow-300 transition-colors">
+                      {step.title}
+                    </h3>
+                    <div className="mt-4 w-16 h-1 bg-imperial-gold/30 rounded-full"></div>
+                    <div className="mt-6 text-rose-champagne/80">
+                      {t('howItWorks.hoverToReveal')}
+                    </div>
+                  </div>
+                </div>
+
+                {/* Card Back */}
+                <div className="absolute inset-0 p-8 rounded-2xl bg-gradient-to-br from-royal-purple/40 via-black to-royal-purple/30 border border-imperial-gold/50 shadow-lg backface-hidden rotate-y-180 transition-transform duration-700 ease-in-out group-hover:rotate-y-0">
+                  <div className="text-center h-full flex flex-col justify-center items-center p-2">
+                    <p className="text-rose-champagne/90 leading-relaxed font-raleway mb-4">
+                      {step.description}
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -112,4 +124,4 @@ export const HowItWorks: React.FC = () => {
       </div>
     </section>
   );
-}; 
+};

@@ -211,23 +211,6 @@ export const Hero: React.FC = () => {
               </div>
             </div>
 
-            {/* Glassmorphism Scarcity Badge */}
-            <motion.div
-              initial={{ scale: 0.8, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              transition={{ delay: 1.2, duration: 0.5 }}
-              className="bg-white/10 backdrop-blur-md ring-1 ring-white/15 rounded-full px-6 py-2 inline-flex items-center gap-2 text-rose-champagne mb-8 sm:mb-12"
-            >
-              <div className="w-2 h-2 bg-imperial-gold rounded-full animate-pulse"></div>
-              <span className="font-raleway font-medium text-sm sm:text-base">
-                {isLoading ? (
-                  t('common.loading')
-                ) : (
-                  `${spotsLeft || 0} ${t('hero.spotsLeft')}`
-                )}
-              </span>
-            </motion.div>
-
             {/* CTA instruction */}
             <motion.p 
               initial={{ opacity: 0 }}
@@ -281,10 +264,10 @@ export const Hero: React.FC = () => {
               className="text-center space-y-4"
             >
               <h3 className="text-2xl md:text-3xl font-cinzel text-imperial-gold leading-relaxed">
-                Votre Royaume Vous Attend
+                Ton Royaume t’atttend 
               </h3>
               <p className="text-lg md:text-xl font-raleway text-rose-champagne/90 leading-relaxed max-w-sm">
-                Découvrez votre véritable potentiel et rejoignez l'élite des femmes qui transforment leur destin.
+                Découvre ton véritable potentiel et rejoins une sororité de femmes avec qui grandir et partager
               </p>
               <motion.button
                 onClick={() => handleCardDraw('Destinée Royale')}
@@ -292,7 +275,7 @@ export const Hero: React.FC = () => {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                Commencer Mon Voyage
+                J’entre au Royaume 
               </motion.button>
             </motion.div>
             
