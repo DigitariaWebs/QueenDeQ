@@ -392,10 +392,13 @@ const translations = {
     'cards.cabinet.subtitle': 'Parce qu\'on aime te gâter, Queen.',
     'cards.cabinet.item1.title': 'Le jeu de cartes',
     'cards.cabinet.item1.desc': '54 cartes, 54 archétypes amoureux. À imprimer sur du carton ou à coller sur un jeu de cartes traditionnel.',
+    'cards.cabinet.item1.button': 'Télécharger #',
     'cards.cabinet.item2.title': 'Queen de Q – Le livre',
     'cards.cabinet.item2.desc': 'Procure-toi la version numérique ou imprimée du livre Queen de Q, un outil pour aller plus loin dans l\'exploration des patterns amoureux.',
+    'cards.cabinet.item2.button': 'Bientôt disponible',
     'cards.cabinet.item3.title': 'La Boutique',
     'cards.cabinet.item3.desc': 'Affiche ta Reine intérieure grâce à nos produits dérivés et surveille les drops de merch exclusive à venir!',
+    'cards.cabinet.item3.button': 'Visiter la boutique',
 
     // Cards page - Creative additions
     'cards.portal.title': 'Le Portail des Archétypes',
@@ -912,10 +915,13 @@ const translations = {
     'cards.cabinet.subtitle': 'Explore the archetypes, lift the veil on your dynamics, and understand the rules of the game to better reign.',
     'cards.cabinet.item1.title': 'The Veil of Mysteries',
     'cards.cabinet.item1.desc': 'Each card is a key to decipher the patterns that shape your encounters.',
+    'cards.cabinet.item1.button': 'Download #',
     'cards.cabinet.item2.title': 'Your Creative Canvas',
     'cards.cabinet.item2.desc': 'Use these archetypes as a source of inspiration for your thoughts and stories.',
+    'cards.cabinet.item2.button': 'Coming Soon',
     'cards.cabinet.item3.title': 'The Rules of the Game',
     'cards.cabinet.item3.desc': 'Draw a card, identify the archetype, and ask yourself: progression or repetition?',
+    'cards.cabinet.item3.button': 'Visit Store',
 
     // Cards page - Creative additions
     'cards.portal.title': 'The Archetype Portal',

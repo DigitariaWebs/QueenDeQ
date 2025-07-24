@@ -94,7 +94,16 @@ const CabinetIntro = () => {
                             <Eye className="w-10 h-10 mb-4 text-imperial-gold/80" />
                         </motion.div>
                         <h3 className="font-cinzel text-2xl font-semibold text-rose-champagne mb-2">{t('cards.cabinet.item1.title')}</h3>
-                        <p className="font-raleway text-rose-champagne/70 text-sm">{t('cards.cabinet.item1.desc')}</p>
+                        <p className="font-raleway text-rose-champagne/70 text-sm mb-4">{t('cards.cabinet.item1.desc')}</p>
+                        <a 
+                            href="#" 
+                            className="mt-auto w-full px-4 py-2 bg-gradient-to-r from-imperial-gold to-smoky-gold text-royal-purple font-cinzel font-bold rounded-lg hover:from-smoky-gold hover:to-imperial-gold transition-all duration-300 text-center text-sm"
+                        >
+                            <svg className="w-4 h-4 inline mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                            </svg>
+                            {t('cards.cabinet.item1.button') || 'Download Cards'}
+                        </a>
                     </motion.div>
                     
                     {/* Instruction 2 */}
@@ -103,7 +112,15 @@ const CabinetIntro = () => {
                             <Sparkles className="w-10 h-10 mb-4 text-imperial-gold/80" />
                         </motion.div>
                         <h3 className="font-cinzel text-2xl font-semibold text-rose-champagne mb-2">{t('cards.cabinet.item2.title')}</h3>
-                        <p className="font-raleway text-rose-champagne/70 text-sm">{t('cards.cabinet.item2.desc')}</p>
+                        <p className="font-raleway text-rose-champagne/70 text-sm mb-4">{t('cards.cabinet.item2.desc')}</p>
+                        <div 
+                            className="mt-auto w-full px-4 py-2 bg-gradient-to-r from-imperial-gold/30 to-smoky-gold/30 text-imperial-gold font-cinzel font-bold rounded-lg border border-imperial-gold/50 text-center text-sm cursor-not-allowed"
+                        >
+                            <svg className="w-4 h-4 inline mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+                            </svg>
+                            {t('cards.cabinet.item2.button') || 'Coming Soon'}
+                        </div>
                     </motion.div>
 
                     {/* Instruction 3 */}
@@ -112,7 +129,18 @@ const CabinetIntro = () => {
                             <Swords className="w-10 h-10 mb-4 text-imperial-gold/80" />
                         </motion.div>
                         <h3 className="font-cinzel text-2xl font-semibold text-rose-champagne mb-2">{t('cards.cabinet.item3.title')}</h3>
-                        <p className="font-raleway text-rose-champagne/70 text-sm">{t('cards.cabinet.item3.desc')}</p>
+                        <p className="font-raleway text-rose-champagne/70 text-sm mb-4">{t('cards.cabinet.item3.desc')}</p>
+                        <a 
+                            href="https://www.redbubble.com/fr/people/QueensdeQ/shop?asc=u" 
+                            target="_blank" 
+                            rel="noopener noreferrer" 
+                            className="mt-auto w-full px-4 py-2 bg-gradient-to-r from-imperial-gold to-smoky-gold text-royal-purple font-cinzel font-bold rounded-lg hover:from-smoky-gold hover:to-imperial-gold transition-all duration-300 text-center text-sm"
+                        >
+                            <svg className="w-4 h-4 inline mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+                            </svg>
+                            {t('cards.cabinet.item3.button') || 'Visit Store'}
+                        </a>
                     </motion.div>
                 </motion.div>
             </motion.div>
