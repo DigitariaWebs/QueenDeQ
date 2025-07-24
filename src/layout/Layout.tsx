@@ -349,9 +349,6 @@ export const Layout: React.FC = () => {
                 >
                   {t('footer.termsComingSoon')}
                 </Link>
-                <p className="text-rose-champagne/60 text-sm">
-                  {t('footer.rights')}
-                </p>
               </div>
             </div>
           </div>

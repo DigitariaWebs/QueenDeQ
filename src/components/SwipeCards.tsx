@@ -62,7 +62,7 @@ const SwipeCards = () => {
   return (
     <div className="relative">
       {/* Explication du concept avant les cartes */}
-      {cards.length === cardData.length && (
+      {/* {cards.length === cardData.length && (
         <div className="text-center mb-12 max-w-3xl mx-auto">
           <div className="bg-royal-purple/20 border border-imperial-gold/30 rounded-2xl p-8 backdrop-blur-sm">
             <div className="flex items-center justify-center mb-4">
@@ -132,7 +132,7 @@ const SwipeCards = () => {
             </div>
           </div>
         </div>
-      )}
+      )} */}
 
       {/* Screen reader announcements */}
       <div 
@@ -154,6 +154,7 @@ const SwipeCards = () => {
         aria-label="Cabinet de cartes interactif"
         tabIndex={0}
       >
+        {/* Cards temporarily commented out
         {cards.length > 0 ? (
           cards.map((card) => (
             <Card 
@@ -166,7 +167,7 @@ const SwipeCards = () => {
               {...card} 
             />
           ))
-        ) : (
+        ) : ( */}
           <div className="text-center max-w-2xl mx-auto relative">
             {/* Effet de particules dorées */}
             <div className="absolute inset-0 pointer-events-none">
@@ -277,7 +278,7 @@ const SwipeCards = () => {
               <p className="text-imperial-gold/70 font-cinzel text-xs mt-2" dangerouslySetInnerHTML={{ __html: '— ' + t('swipe.quoteQueen') }} />
             </div>
           </div>
-        )}
+        {/* )} */}
       </div>
     </div>
   );
