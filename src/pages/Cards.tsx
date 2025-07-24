@@ -96,7 +96,7 @@ const CabinetIntro = () => {
                         <h3 className="font-cinzel text-2xl font-semibold text-rose-champagne mb-2">{t('cards.cabinet.item1.title')}</h3>
                         <p className="font-raleway text-rose-champagne/70 text-sm mb-4">{t('cards.cabinet.item1.desc')}</p>
                         <a 
-                            href="#" 
+                            href="https://storage.googleapis.com/works23/QueenDeQ/Queen%20de%20Q%20%20CARTES%20.pdf" 
                             className="mt-auto w-full px-4 py-2 bg-gradient-to-r from-imperial-gold to-smoky-gold text-royal-purple font-cinzel font-bold rounded-lg hover:from-smoky-gold hover:to-imperial-gold transition-all duration-300 text-center text-sm"
                         >
                             <svg className="w-4 h-4 inline mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -174,4 +174,4 @@ export const Cards: React.FC = () => {
       </div>
     </SmoothScroll>
   );
-}; 
+};
