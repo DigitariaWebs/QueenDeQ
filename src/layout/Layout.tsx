@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { Link, Outlet, useLocation } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
 import { LanguageSwitcher } from '../components/LanguageSwitcher';
-import { LiveTeaBanner } from '../components/LiveTeaBanner';
 import { InscriptionForm } from '../components/InscriptionForm';
 import { useTranslation } from '../context/TranslationContext';
 import KingdomInvitation from '../components/KingdomInvitation';
@@ -231,7 +230,7 @@ export const Layout: React.FC = () => {
         <Outlet />
       </main>
 
-      <LiveTeaBanner onOpenInscriptionForm={handleOpenInscriptionForm} />
+      {/* LiveTeaBanner removed */}
 
       <footer className="relative py-16 bg-gradient-to-b from-royal-purple to-black overflow-hidden">
         {/* Particules dorées décoratives */}
