@@ -149,7 +149,7 @@ const SwipeCards = () => {
       </div>
       
       <div
-        className="grid h-[500px] w-full place-items-center bg-transparent focus-within:outline-2 focus-within:outline-[#D6AE60] focus-within:outline-offset-2"
+        className="w-full place-items-center bg-transparent focus-within:outline-2 focus-within:outline-[#D6AE60] focus-within:outline-offset-2 min-h-[500px] pb-24"
         role="application"
         aria-label="Cabinet de cartes interactif"
         tabIndex={0}
@@ -168,7 +168,7 @@ const SwipeCards = () => {
             />
           ))
         ) : ( */}
-          <div className="text-center max-w-2xl mx-auto relative">
+          <div className="text-center max-w-2xl mx-auto relative px-4 pb-8">
             {/* Effet de particules dorées */}
             <div className="absolute inset-0 pointer-events-none">
               <div className="absolute top-4 left-8 w-2 h-2 bg-imperial-gold rounded-full animate-pulse opacity-60"></div>
@@ -233,19 +233,19 @@ const SwipeCards = () => {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
                 <div className="flex items-start">
                   <div className="w-2 h-2 bg-imperial-gold rounded-full mr-3 mt-2 flex-shrink-0"></div>
-                  <span className="text-rose-champagne/80 font-raleway">{t('swipe.discoverPatterns')}</span>
+                  <span className="text-rose-champagne/80 font-raleway" dangerouslySetInnerHTML={{ __html: t('swipe.discoverPatterns') }} />
                 </div>
                 <div className="flex items-start">
                   <div className="w-2 h-2 bg-imperial-gold rounded-full mr-3 mt-2 flex-shrink-0"></div>
-                  <span className="text-rose-champagne/80 font-raleway">{t('swipe.understandWhy')}</span>
+                  <span className="text-rose-champagne/80 font-raleway" dangerouslySetInnerHTML={{ __html: t('swipe.understandWhy') }} />
                 </div>
                 <div className="flex items-start">
                   <div className="w-2 h-2 bg-imperial-gold rounded-full mr-3 mt-2 flex-shrink-0"></div>
-                  <span className="text-rose-champagne/80 font-raleway">{t('swipe.learnRedFlags')}</span>
+                  <span className="text-rose-champagne/80 font-raleway" dangerouslySetInnerHTML={{ __html: t('swipe.learnRedFlags') }} />
                 </div>
                 <div className="flex items-start">
                   <div className="w-2 h-2 bg-imperial-gold rounded-full mr-3 mt-2 flex-shrink-0"></div>
-                  <span className="text-rose-champagne/80 font-raleway">{t('swipe.transformRelations')}</span>
+                  <span className="text-rose-champagne/80 font-raleway" dangerouslySetInnerHTML={{ __html: t('swipe.transformRelations') }} />
                 </div>
               </div>
             </div>

@@ -101,7 +101,7 @@ export const InscriptionForm: React.FC<InscriptionFormProps> = ({
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
-        className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-2"
+        className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-2 sm:p-4"
         onClick={onClose}
         onWheel={handleWheel}
       >
@@ -111,7 +111,7 @@ export const InscriptionForm: React.FC<InscriptionFormProps> = ({
           animate={{ scale: 1, opacity: 1, y: 0 }}
           exit={{ scale: 0.8, opacity: 0, y: 50 }}
           transition={{ type: "spring", stiffness: 300, damping: 30, mass: 0.8 }}
-        className="relative w-full max-w-2xl my-auto overflow-hidden rounded-2xl shadow-2xl"
+        className="relative w-full max-w-2xl max-h-[90vh] sm:max-h-[85vh] my-auto overflow-y-auto rounded-xl sm:rounded-2xl shadow-2xl"
           onClick={(e) => e.stopPropagation()}
         >
           {/* Animated Background */}
@@ -151,28 +151,28 @@ export const InscriptionForm: React.FC<InscriptionFormProps> = ({
               e.stopPropagation();
               onClose();
             }}
-            className="absolute top-2 right-2 z-50 w-8 h-8 flex items-center justify-center text-imperial-gold hover:text-yellow-300 transition-all duration-200 hover:rotate-90 bg-black/20 hover:bg-black/40 rounded-full border border-imperial-gold/30 hover:border-imperial-gold/60"
+            className="absolute top-3 right-3 sm:top-2 sm:right-2 z-50 w-9 h-9 sm:w-8 sm:h-8 flex items-center justify-center text-imperial-gold hover:text-yellow-300 transition-all duration-200 hover:rotate-90 bg-black/20 hover:bg-black/40 rounded-full border border-imperial-gold/30 hover:border-imperial-gold/60"
             type="button"
           >
-            <X className="w-5 h-5" />
+            <X className="w-5 h-5 sm:w-5 sm:h-5" />
           </button>
 
           {/* Content */}
-          <div className="relative z-10 p-8 flex flex-col items-center justify-center" style={{ minHeight: '600px' }}>
+          <div className="relative z-10 p-4 sm:p-6 md:p-8 flex flex-col items-center justify-center">
             {/* Header */}
-            <div className="text-center mb-8">
+            <div className="text-center mb-6 sm:mb-8">
               <motion.div
                 initial={{ scale: 0 }}
                 animate={{ scale: 1 }}
                 transition={{ delay: 0.2, type: "spring", stiffness: 300 }}
-                className="relative w-24 h-24 mx-auto mb-6"
+                className="relative w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 mx-auto mb-4 sm:mb-6"
               >
                 <div className="absolute inset-0 bg-gradient-to-br from-imperial-gold via-yellow-400 to-imperial-gold rounded-full animate-pulse" />
-                <div className="absolute inset-3 bg-royal-purple rounded-full flex items-center justify-center">
-                  <Crown className="w-12 h-12 text-imperial-gold" />
+                <div className="absolute inset-2 sm:inset-3 bg-royal-purple rounded-full flex items-center justify-center">
+                  <Crown className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 text-imperial-gold" />
                 </div>
-                <div className="absolute -top-2 -right-2">
-                  <Sparkles className="w-6 h-6 text-imperial-gold animate-spin" />
+                <div className="absolute -top-1 -right-1 sm:-top-2 sm:-right-2">
+                  <Sparkles className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 text-imperial-gold animate-spin" />
                 </div>
               </motion.div>
 
@@ -180,7 +180,7 @@ export const InscriptionForm: React.FC<InscriptionFormProps> = ({
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3 }}
-                className="text-4xl font-cinzel font-bold text-imperial-gold mb-3"
+                className="text-2xl sm:text-3xl md:text-4xl font-cinzel font-bold text-imperial-gold mb-2 sm:mb-3"
               >
                 Inscription Royale
               </motion.h2>
@@ -189,7 +189,7 @@ export const InscriptionForm: React.FC<InscriptionFormProps> = ({
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.4 }}
-                className="text-rose-champagne/80 font-raleway text-lg"
+                className="text-rose-champagne/80 font-raleway text-base sm:text-lg"
               >
                 Accédez au Royaume
               </motion.p>
@@ -198,25 +198,25 @@ export const InscriptionForm: React.FC<InscriptionFormProps> = ({
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ delay: 0.5 }}
-                className="mt-6 p-6 bg-imperial-gold/10 border border-imperial-gold/30 rounded-xl"
+                className="mt-4 sm:mt-6 p-4 sm:p-6 bg-imperial-gold/10 border border-imperial-gold/30 rounded-xl"
               >
-                <p className="text-rose-champagne/90 leading-relaxed font-raleway text-center text-base">
+                <p className="text-rose-champagne/90 leading-relaxed font-raleway text-center text-sm sm:text-base">
                   🌟 Votre destinée vous appelle ! Cette application exclusive vous donnera accès à des outils personnalisés pour développer votre potentiel, rejoindre une communauté de femmes inspirantes et transformer votre vie. Ne laissez pas passer cette opportunité unique de devenir la reine de votre propre royaume. <span className="text-imperial-gold font-semibold">Votre transformation commence maintenant !</span>
                 </p>
               </motion.div>
             </div>
 
             {/* Acceptance Form */}
-            <form onSubmit={handleSubmit} className="space-y-4 w-full">
+            <form onSubmit={handleSubmit} className="space-y-3 sm:space-y-4 w-full">
               {/* Terms Acceptance */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.8 }}
-                className="bg-black/20 border border-imperial-gold/30 rounded-xl p-3"
+                className="bg-black/20 border border-imperial-gold/30 rounded-xl p-3 sm:p-4"
               >
-                <div className="flex items-start space-x-2">
-                  <div className="relative">
+                <div className="flex items-start space-x-3">
+                  <div className="relative mt-0.5">
                     <input
                       type="checkbox"
                       id="acceptance"
@@ -236,7 +236,7 @@ export const InscriptionForm: React.FC<InscriptionFormProps> = ({
                   <div className="flex-1">
                     <label
                       htmlFor="acceptance"
-                      className="text-rose-champagne font-raleway leading-relaxed cursor-pointer text-xs"
+                      className="text-rose-champagne font-raleway leading-relaxed cursor-pointer text-sm sm:text-base"
                     >
                       J'accepte de rejoindre la <span className="text-imperial-gold font-semibold">Queen Platform</span> pour accéder à cette expérience exclusive.
                     </label>
@@ -251,20 +251,22 @@ export const InscriptionForm: React.FC<InscriptionFormProps> = ({
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 1.2 }}
-                className="w-full bg-gradient-to-r from-imperial-gold to-yellow-600 hover:from-yellow-600 hover:to-imperial-gold text-royal-purple font-bold py-3 px-4 rounded-xl transition-all duration-300 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none text-base"
+                className="w-full bg-gradient-to-r from-imperial-gold to-yellow-600 hover:from-yellow-600 hover:to-imperial-gold text-royal-purple font-bold py-3 sm:py-4 px-4 sm:px-6 rounded-xl transition-all duration-300 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none text-sm sm:text-base"
                 whileHover={{ scale: !isAccepted || isLoading ? 1 : 1.02 }}
                 whileTap={{ scale: !isAccepted || isLoading ? 1 : 0.98 }}
               >
                 {isLoading ? (
                   <div className="flex items-center justify-center">
                     <div className="w-5 h-5 border-2 border-royal-purple border-t-transparent rounded-full animate-spin mr-2"></div>
-                    Redirection en cours...
+                    <span className="hidden sm:inline">Redirection en cours...</span>
+                    <span className="sm:hidden">Redirection...</span>
                   </div>
                 ) : (
                   <div className="flex items-center justify-center">
-                    <Crown className="w-5 h-5 mr-2" />
-                    Accédez au Royaume
-                    <ExternalLink className="w-4 h-4 ml-2" />
+                    <Crown className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
+                    <span className="hidden sm:inline">Accédez au Royaume</span>
+                    <span className="sm:hidden">Accéder</span>
+                    <ExternalLink className="w-3 h-3 sm:w-4 sm:h-4 ml-1 sm:ml-2" />
                   </div>
                 )}
               </motion.button>

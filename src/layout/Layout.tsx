@@ -198,9 +198,9 @@ export const Layout: React.FC = () => {
               </li>
               <li>
                 <Link 
-                  to="/cards" 
+                  to="/cabinet" 
                   className={`block px-4 py-2 rounded-lg ${
-                    location.pathname === '/cards' 
+                    location.pathname === '/cabinet' 
                       ? 'bg-imperial-gold/20 text-imperial-gold' 
                       : 'text-rose-champagne hover:bg-imperial-gold/10 hover:text-imperial-gold'
                   } transition-colors`}
