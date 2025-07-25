@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, Outlet, useLocation } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
-import { LanguageSwitcher } from '../components/LanguageSwitcher';
+// import { LanguageSwitcher } from '../components/LanguageSwitcher';
 import { InscriptionForm } from '../components/InscriptionForm';
 import { useTranslation } from '../context/TranslationContext';
 import KingdomInvitation from '../components/KingdomInvitation';
@@ -144,12 +144,12 @@ export const Layout: React.FC = () => {
               </nav>
               
               {/* Language Switcher */}
-              <LanguageSwitcher />
+              {/* <LanguageSwitcher /> */}
             </div>
 
             {/* Menu hamburger - Mobile */}
             <div className="md:hidden flex items-center space-x-4">
-              <LanguageSwitcher />
+              {/* <LanguageSwitcher /> */}
               
               <button 
                 className="flex flex-col justify-center items-center w-10 h-10 rounded-full border border-imperial-gold/30 focus:outline-none"

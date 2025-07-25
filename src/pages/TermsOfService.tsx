@@ -24,22 +24,26 @@ const TermsOfService = () => {
         
         <div className="space-y-8 text-gray-200">
           {/* Sections 1-18 */}
-          {Array.from({ length: 18 }, (_, i) => i + 1).map((section) => (
-            <section key={section}>
-              <h2 className="text-2xl font-cinzel text-imperial-gold mb-4">
-                {section}. {t(`terms.section${section}.title`)}
-              </h2>
-              <div className="mb-4 whitespace-pre-wrap">
-                {t(`terms.section${section}.content`)}
-              </div>
-              {/* Render subsections if they exist */}
-              {t(`terms.section${section}.subsections`, { defaultValue: '' }).split('•').filter(Boolean).map((subsection, index) => (
-                <div key={index} className="ml-6 mb-2">
-                  • {subsection.trim()}
+          {Array.from({ length: 18 }, (_, i) => i + 1).map((section) => {
+            // Cast t as any to allow dynamic keys
+            const tAny = t as any;
+            return (
+              <section key={section}>
+                <h2 className="text-2xl font-cinzel text-imperial-gold mb-4">
+                  {section}. {tAny(`terms.section${section}.title`)}
+                </h2>
+                <div className="mb-4 whitespace-pre-wrap">
+                  {tAny(`terms.section${section}.content`)}
                 </div>
-              ))}
-            </section>
-          ))}
+                {/* Render subsections if they exist */}
+                {tAny(`terms.section${section}.subsections`, { defaultValue: '' }).split('•').filter(Boolean).map((subsection: string, index: number) => (
+                  <div key={index} className="ml-6 mb-2">
+                    • {subsection.trim()}
+                  </div>
+                ))}
+              </section>
+            );
+          })}
         </div>
       </div>
     </div>
