@@ -250,7 +250,7 @@ const SwipeCards = () => {
               </div>
             </div>
 
-            <div className="space-y-4">
+            {/* <div className="space-y-4">
               <a 
                 href="#signup" 
                 className="block w-full px-8 py-5 bg-gradient-to-r from-imperial-gold via-yellow-500 to-imperial-gold text-royal-purple font-cinzel font-bold text-lg rounded-xl hover:from-yellow-500 hover:to-imperial-gold transition-all duration-300 shadow-lg hover:shadow-2xl transform hover:scale-105 border-2 border-imperial-gold/50 hover:border-imperial-gold"
@@ -270,7 +270,7 @@ const SwipeCards = () => {
                 </svg>
                 {t('swipe.restart4Cards')}
               </button>
-            </div>
+            </div> */}
 
             {/* Citation inspirante */}
             <div className="mt-8 pt-6 border-t border-imperial-gold/20">

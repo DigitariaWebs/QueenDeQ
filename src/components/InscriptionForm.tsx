@@ -111,7 +111,7 @@ export const InscriptionForm: React.FC<InscriptionFormProps> = ({
           animate={{ scale: 1, opacity: 1, y: 0 }}
           exit={{ scale: 0.8, opacity: 0, y: 50 }}
           transition={{ type: "spring", stiffness: 300, damping: 30, mass: 0.8 }}
-        className="relative w-full max-w-2xl max-h-[90vh] sm:max-h-[85vh] my-auto overflow-y-auto rounded-xl sm:rounded-2xl shadow-2xl"
+        className="relative w-full max-w-2xl max-h-[90vh] sm:max-h-none my-auto overflow-y-auto sm:overflow-visible rounded-xl sm:rounded-2xl shadow-2xl"
           onClick={(e) => e.stopPropagation()}
         >
           {/* Animated Background */}
