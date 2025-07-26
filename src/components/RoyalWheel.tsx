@@ -139,7 +139,7 @@ export const RoyalWheel: React.FC<RoyalWheelProps> = ({ onCardDraw, className = 
   // Announce results for screen readers
   useEffect(() => {
     if (revealedCards.length > 0) {
-      const announcement = `Vous avez tiré ${revealedCards.map(card => card.name).join(', ')}`;
+      const announcement = `Tu as tiré ${revealedCards.map(card => card.name).join(', ')}`;
       const announcer = document.createElement('div');
       announcer.setAttribute('aria-live', 'polite');
       announcer.setAttribute('aria-atomic', 'true');
@@ -290,7 +290,7 @@ export const RoyalWheel: React.FC<RoyalWheelProps> = ({ onCardDraw, className = 
       {/* Description */}
       <div className="text-center mb-12">
         <p className="text-lg text-rose-champagne/80 max-w-2xl mx-auto font-raleway">
-          Clique pour tourner et révéler trois archétypes…
+          Clique pour tourner et découvre tes trois archétypes…
         </p>
       </div>
 
@@ -372,7 +372,7 @@ export const RoyalWheel: React.FC<RoyalWheelProps> = ({ onCardDraw, className = 
 
       {/* Screen reader only content */}
       <div className="sr-only" aria-live="polite" aria-atomic="true">
-        {isSpinning && "La roue tourne..."}
+        {isSpinning && "La roue tourne pour toi..."}
       </div>
 
       <style>{`

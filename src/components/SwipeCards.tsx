@@ -151,7 +151,7 @@ const SwipeCards = () => {
       <div
         className="w-full place-items-center bg-transparent focus-within:outline-2 focus-within:outline-[#D6AE60] focus-within:outline-offset-2 min-h-[60px] pb-24"
         role="application"
-        aria-label="Cabinet de cartes interactif"
+        aria-label="Ton cabinet de cartes interactif"
         tabIndex={0}
       >
         {/* Cards temporarily commented out

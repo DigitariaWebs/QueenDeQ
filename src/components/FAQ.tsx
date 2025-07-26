@@ -12,7 +12,7 @@ export const FAQ: React.FC = () => {
     },
     {
       question: 'Comment utiliser Queen de Q au quotidien?',
-      answer: 'Intègre l\'application dans ta routine comme un moment de connexion avec toi-même. Tire une carte quand tu rencontres quelqu\'un de nouveau, utilise le journal pour noter tes observations sur tes patterns, et consulte la Reine Mère quand tu as besoin de conseils ou de rituels de guérison. L\'application est conçue pour être à la fois ludique et profondément transformative.'
+      answer: 'Intègre l’application dans ta routine comme un moment de connexion avec toi-même. Tire une carte quand tu rencontres quelqu’un de nouveau, utilise ton journal pour noter tes observations sur tes patterns, et consulte la Reine Mère quand tu as besoin de conseils ou de rituels de guérison. L’application est conçue pour être à la fois ludique et profondément transformative.'
     }
   ];
   

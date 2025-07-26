@@ -201,7 +201,7 @@ export const InscriptionForm: React.FC<InscriptionFormProps> = ({
                 className="mt-4 sm:mt-6 p-4 sm:p-6 bg-imperial-gold/10 border border-imperial-gold/30 rounded-xl"
               >
                 <p className="text-rose-champagne/90 leading-relaxed font-raleway text-center text-sm sm:text-base">
-                  🌟 Votre destinée vous appelle ! Cette application exclusive vous donnera accès à des outils personnalisés pour développer votre potentiel, rejoindre une communauté de femmes inspirantes et transformer votre vie. Ne laissez pas passer cette opportunité unique de devenir la reine de votre propre royaume. <span className="text-imperial-gold font-semibold">Votre transformation commence maintenant !</span>
+                  🌟 Ta destinée t'appelle ! Cette application exclusive te donnera accès à des outils personnalisés pour développer ton potentiel, rejoindre une communauté de femmes inspirantes et transformer ta vie. Ne laisse pas passer cette opportunité unique de devenir la reine de ton propre royaume. <span className="text-imperial-gold font-semibold">Ta transformation commence maintenant !</span>
                 </p>
               </motion.div>
             </div>

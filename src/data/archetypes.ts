@@ -24,7 +24,7 @@ export const masculineArchetypes: MasculineArchetype[] = [
     description: 'Un homme qui met la famille et les émotions au centre. Présent, attentionné, il crée un cocon sécurisant.',
     traits: ['Empathique', 'Protecteur', 'Fidèle', 'Familial'],
     shadow: 'Peut devenir possessif ou trop maternel',
-    attraction: 'Vous attirez les hommes qui veulent créer un foyer stable'
+    attraction: 'Tu attires les hommes qui veulent créer un foyer stable'
   },
   {
     id: 'queen-hearts',
@@ -35,7 +35,7 @@ export const masculineArchetypes: MasculineArchetype[] = [
     description: 'Passionné et romantique, il vit l\'amour comme un conte de fées. Attentions délicates et grands gestes.',
     traits: ['Romantique', 'Passionné', 'Attentionné', 'Expressif'],
     shadow: 'Tendance à l\'idéalisation et à la jalousie',
-    attraction: 'Vous attirez les âmes romantiques qui croient au grand amour'
+    attraction: 'Tu attires les âmes romantiques qui croient au grand amour'
   },
   {
     id: 'jack-hearts',
@@ -46,7 +46,7 @@ export const masculineArchetypes: MasculineArchetype[] = [
     description: 'Émotionnellement ouvert, artistique, il porte son cœur sur la main. Vulnérable mais authentique.',
     traits: ['Sensible', 'Artistique', 'Vulnerable', 'Authentique'],
     shadow: 'Instabilité émotionnelle et dépendance affective',
-    attraction: 'Vous attirez les âmes sensibles qui ont besoin de réconfort'
+    attraction: 'Tu attires les âmes sensibles qui ont besoin de réconfort'
   },
   {
     id: 'ace-hearts',
@@ -57,7 +57,7 @@ export const masculineArchetypes: MasculineArchetype[] = [
     description: 'Il représente le potentiel d\'un amour pur et nouveau. Fraîcheur, espoir, début d\'histoire.',
     traits: ['Pur', 'Espoir', 'Fraîcheur', 'Potentiel'],
     shadow: 'Manque d\'expérience et naïveté',
-    attraction: 'Vous attirez les hommes qui offrent un nouveau commencement'
+    attraction: 'Tu attires les hommes qui offrent un nouveau commencement'
   },
 
   // CARREAUX - Les Ambitieux/Matérialistes  
@@ -70,7 +70,7 @@ export const masculineArchetypes: MasculineArchetype[] = [
     description: 'Pouvoir, réussite, charisme. Il mène sa vie comme son entreprise : avec ambition et détermination.',
     traits: ['Ambitieux', 'Leader', 'Charismatique', 'Déterminé'],
     shadow: 'Narcissisme et priorité au travail sur la relation',
-    attraction: 'Vous attirez les hommes de pouvoir et d\'influence'
+    attraction: 'Tu attires les hommes de pouvoir et d’influence'
   },
   {
     id: 'queen-diamonds',
@@ -81,7 +81,7 @@ export const masculineArchetypes: MasculineArchetype[] = [
     description: 'Il aime les belles choses, les expériences luxueuses. Généreux mais parfois superficiel.',
     traits: ['Généreux', 'Raffiné', 'Sociable', 'Matérialiste'],
     shadow: 'Superficialité et rapport à l\'argent problématique',
-    attraction: 'Vous attirez les hommes qui aiment profiter de la vie'
+    attraction: 'Tu attires les hommes qui aiment profiter de la vie'
   },
   {
     id: 'jack-diamonds',
@@ -92,7 +92,7 @@ export const masculineArchetypes: MasculineArchetype[] = [
     description: 'Malin, adaptable, il saisit les occasions. Charme et pragmatisme sont ses atouts.',
     traits: ['Malin', 'Adaptable', 'Charmeur', 'Pragmatique'],
     shadow: 'Peut être manipulateur et peu fiable',
-    attraction: 'Vous attirez les charmeurs opportunistes'
+    attraction: 'Tu attires les charmeurs opportunistes'
   },
 
   // TRÈFLES - Les Actifs/Communicants
@@ -105,7 +105,7 @@ export const masculineArchetypes: MasculineArchetype[] = [
     description: 'Force, action, leadership naturel. Il fonce vers ses objectifs avec une énergie débordante.',
     traits: ['Fort', 'Actif', 'Leader', 'Énergique'],
     shadow: 'Agressivité et besoin de domination',
-    attraction: 'Vous attirez les hommes d\'action et de conquête'
+    attraction: 'Tu attires les hommes d’action et de conquête'
   },
   {
     id: 'queen-clubs',
@@ -116,7 +116,7 @@ export const masculineArchetypes: MasculineArchetype[] = [
     description: 'Sociable, bavard, il adore échanger et créer du lien. Network et relations sont sa spécialité.',
     traits: ['Sociable', 'Communicant', 'Créatif', 'Énergique'],
     shadow: 'Peut être superficiel dans ses relations',
-    attraction: 'Vous attirez les grands communicants et networkers'
+    attraction: 'Tu attires les grands communicants et networkers'
   },
 
   // PIQUES - Les Intellectuels/Mystérieux
@@ -129,7 +129,7 @@ export const masculineArchetypes: MasculineArchetype[] = [
     description: 'Intelligence, mystère, profondeur. Il fascine par sa complexité et son côté insaisissable.',
     traits: ['Intelligent', 'Mystérieux', 'Profond', 'Complexe'],
     shadow: 'Tendance à la manipulation et aux jeux psychologiques',
-    attraction: 'Vous attirez les hommes complexes et mystérieux'
+    attraction: 'Tu attires les hommes complexes et mystérieux'
   },
   {
     id: 'two-spades',
@@ -140,7 +140,7 @@ export const masculineArchetypes: MasculineArchetype[] = [
     description: 'Comme mentionné dans le cahier des charges, il représente les relations toxiques et manipulatrices.',
     traits: ['Manipulateur', 'Charmeur', 'Toxique', 'Séducteur'],
     shadow: 'Perversion narcissique et manipulation émotionnelle',
-    attraction: 'Vous attirez malheureusement les manipulateurs'
+    attraction: 'Tu attires malheureusement les manipulateurs'
   },
   {
     id: 'ace-spades',
@@ -151,7 +151,7 @@ export const masculineArchetypes: MasculineArchetype[] = [
     description: 'Indépendant, intellectuel, il privilégie sa liberté. Difficile à apprivoiser mais fascinant.',
     traits: ['Indépendant', 'Intellectuel', 'Libre', 'Solitaire'],
     shadow: 'Difficultés d\'engagement et évitement émotionnel',
-    attraction: 'Vous attirez les esprits libres difficiles à conquérir'
+    attraction: 'Tu attires les esprits libres difficiles à conquérir'
   }
 ];
 

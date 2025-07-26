@@ -55,7 +55,7 @@ const Cards: React.FC<{ onFirstInteraction: () => void }> = ({ onFirstInteractio
     >
       {/* Screen reader instructions */}
       <div className="sr-only">
-        Utilisez Espace ou Entrée pour sélectionner une carte, les flèches pour la déplacer, et Échap pour annuler. Ou glissez directement avec la souris.
+        Utilise Espace ou Entrée pour sélectionner ta carte, les flèches pour la déplacer, et Échap pour annuler. Ou glisse directement avec la souris.
       </div>
       
       <Card

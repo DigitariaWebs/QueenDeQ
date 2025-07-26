@@ -166,14 +166,14 @@ export const SuccessOverlay: React.FC<SuccessOverlayProps> = ({ isVisible, onClo
 
         {/* Message */}
         <p className="text-rose-champagne/80 text-lg mb-6 leading-relaxed animate-cascade-success">
-          Votre voyage mystique commence maintenant. Vérifiez votre email pour les prochaines étapes.
+          Ton voyage mystique commence maintenant. Vérifie ton email pour les prochaines étapes.
         </p>
 
         {/* Carte tirée */}
         {cardName && (
           <div className="bg-black/30 border border-imperial-gold/30 rounded-lg p-4 mb-6 animate-cascade-success">
             <p className="text-imperial-gold font-medium">
-              ✨ Carte tirée : <span className="font-bold">{cardName}</span> ✨
+              ✨ Ta carte tirée : <span className="font-bold">{cardName}</span> ✨
             </p>
           </div>
         )}

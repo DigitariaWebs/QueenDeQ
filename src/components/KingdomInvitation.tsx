@@ -120,7 +120,7 @@ const KingdomInvitation = () => {
                 </div>
                 <form onSubmit={handleSubmit} className="space-y-2">
                   <p className="text-center text-rose-champagne mb-2 text-sm">
-                    Est-ce que t'es prête à révéler ta puissance intérieure?
+                    Est-ce que t'es prête à révéler ta puissance intérieure ?
                   </p>
                   <div className="flex flex-col gap-2">
                     <input
@@ -212,15 +212,15 @@ const KingdomInvitation = () => {
                   </div>
                 </div>
                 <form onSubmit={handleSubmit} className="space-y-4">
-                  <p className="text-center text-rose-champagne mb-4">
-                    Est-ce que t'es prête à révéler ta puissance intérieure?
-                  </p>
+                <p className="text-center text-rose-champagne mb-4">
+                  Est-ce que t'es prête à révéler ta puissance intérieure ?
+                </p>
                   <div className="flex flex-col md:flex-row gap-4">
                     <input
                       type="email"
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
-                      placeholder="Entre ton courriel..."
+                    placeholder="Entre ton courriel..."
                       required
                       className="flex-1 px-4 py-2 rounded-lg bg-black/30 border border-imperial-gold/30 text-rose-champagne placeholder-rose-champagne/50 focus:outline-none focus:border-imperial-gold transition-colors"
                     />
@@ -228,7 +228,7 @@ const KingdomInvitation = () => {
                       type="submit"
                       className="px-6 py-2 bg-gradient-to-r from-imperial-gold via-rose-champagne to-imperial-gold rounded-lg text-black font-medium hover:opacity-90 transition-opacity whitespace-nowrap"
                     >
-                      Je suis prête à me couronner
+                    Je suis prête à me couronner
                     </button>
                   </div>
                 </form>

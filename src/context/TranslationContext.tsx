@@ -19,7 +19,7 @@ const translations = {
     
     // Shop - Updated for new products
     'shop.title': 'Boutique Queen de Q',
-    'shop.subtitle': 'Les produits qui vont réveiller votre Reine intérieure',
+    'shop.subtitle': 'Les produits qui vont réveiller ta Reine intérieure',
     'shop.search': 'Rechercher un produit...',
     'shop.categories.all': 'Tous',
     'shop.categories.cards': 'Cartes',
@@ -36,9 +36,9 @@ const translations = {
     'shop.badges.handcrafted': 'Fait Main',
     // Shop products - Real products
     'shop.items.physicalCards.name': 'Jeu de Cartes Queen de Q • Édition Physique',
-    'shop.items.physicalCards.description': 'Découvrez les archétypes masculins avec notre jeu de cartes physique premium',
+    'shop.items.physicalCards.description': 'Découvre les archétypes masculins avec ton jeu de cartes physique premium',
     'shop.items.queenShirt.name': 'T-Shirt "Je suis une Queen"',
-    'shop.items.queenShirt.description': 'Portez votre couronne avec fierté dans ce t-shirt 100% coton bio',
+    'shop.items.queenShirt.description': 'Porte ta couronne avec fierté dans ce t-shirt 100% coton bio',
     'shop.items.protectionKit.name': 'Kit de Protection Royale',
     'shop.items.protectionKit.description': 'Condoms premium et accessoires pour queens qui se respectent',
     'shop.items.charmBracelet.name': 'Bracelet Anti-2 de Pique',
@@ -48,7 +48,7 @@ const translations = {
     'shop.awakeningTitle': 'La Boutique s\'Éveille',
     'shop.awakeningDesc': 'Notre collection exclusive arrive bientôt avec des produits authentiques Queen de Q. Restez connectées pour les premières révélations !',
     'shop.noProducts': 'Aucun produit trouvé',
-    'shop.noProductsDesc': 'Essayez de modifier vos filtres pour découvrir plus de produits.',
+    'shop.noProductsDesc': 'Essaie de modifier tes filtres pour découvrir plus de produits.',
     
     // Chat - Updated for grandmother persona
     'chat.title': 'Salon de Thé avec Reine-Mère',
@@ -72,12 +72,12 @@ const translations = {
     'chat.timestamp3': '14:35',
     'chat.beta': 'VERSION BETA',
     'chat.awakeningTitle': 'Reine-Mère s\'éveille...',
-    'chat.awakeningMessage': 'Elle apprend chaque jour à mieux vous comprendre et vous accompagner dans vos réflexions sur les archétypes masculins.',
+    'chat.awakeningMessage': 'Elle apprend chaque jour à mieux te comprendre et t’accompagner dans tes réflexions sur les archétypes masculins.',
     'chat.patience': '☕ "Patience ma chérie, le thé de l\'après-midi sera bientôt prêt..."',
-    'chat.exploreJournal': 'En attendant, explorez vos patterns dans votre journal personnel ! 📝',
+    'chat.exploreJournal': 'En attendant, explore tes patterns dans ton journal personnel ! 📝',
     'chat.evolving': '🌱 Reine-Mère est en pleine évolution !',
     'chat.placeholder': 'Tapez votre message...',
-    'chat.betaNote': 'P.S. Je m\'améliore chaque jour pour mieux vous comprendre... Cette version beta me permet d\'apprendre vos besoins ! Bientôt, nos conversations seront encore plus riches. 💫',
+    'chat.betaNote': 'P.S. Je m\'améliore chaque jour pour mieux te comprendre... Cette version beta me permet d\'apprendre tes besoins ! Bientôt, nos conversations seront encore plus riches. 💫',
     
     // Journal - Updated for masculine archetypes focus
     'journal.title': 'Journal d\'Introspection',

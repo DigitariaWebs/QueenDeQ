@@ -332,13 +332,13 @@ export const CreativeCrown: React.FC<CreativeCrownProps> = ({
           className="font-cinzel text-imperial-gold/90 text-lg font-bold mb-2"
           animate={isHovered ? { scale: 1.05 } : { scale: 1 }}
         >
-          Touchez la Couronne Royale
+          Touche la Couronne Royale
         </motion.p>
         <motion.p 
           className="font-raleway text-rose-champagne/70 text-sm"
           animate={isHovered ? { opacity: 1 } : { opacity: 0.7 }}
         >
-          ✨ Révélez votre archétype de pouvoir ✨
+          ✨ Révèle ton archétype de pouvoir ✨
         </motion.p>
       </motion.div>
     </div>

@@ -171,7 +171,7 @@ export const Deck3D: React.FC<Deck3DProps> = ({ onCardDraw, className = '' }) =>
                       letterSpacing: '0.5px'
                     }}
                   >
-                    Une carte. Une seule chance.
+                    Une carte. Un seul destin.
                   </div>
                   <div 
                     className="font-cinzel text-xs md:text-sm text-imperial-gold/70 font-light italic leading-tight tracking-wider"
@@ -180,7 +180,7 @@ export const Deck3D: React.FC<Deck3DProps> = ({ onCardDraw, className = '' }) =>
                       letterSpacing: '0.5px'
                     }}
                   >
-                    Le Royaume t'ouvre ses portes.
+                    Découvre ton royaume.
                   </div>
                 </div>
               </div>

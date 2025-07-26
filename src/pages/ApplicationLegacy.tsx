@@ -29,19 +29,19 @@ export const Application: React.FC = () => {
     {
       icon: <CreditCard className="w-12 h-12" />,
       title: "Ta pioche",
-      description: "En répondant à quelques questions de la Reine Mère, découvre quel archétype masculin est ton ex, ton amoureux ou ton prospect. Plus la carte est forte, plus il est mature émotionnellement : pas pour rien qu'on mérite un King!",
+      description: "En répondant à quelques questions de la Reine Mère, découvre quel archétype masculin est ton ex, ton amoureux ou ton prospect. Plus la carte est forte, plus il est mature émotionnellement : pas pour rien que tu mérites un King!",
       gradient: "from-rose-champagne via-antique-rose to-powder-rose"
     },
     {
       icon: <Search className="w-12 h-12" />,
       title: "Miroir, Miroir",
-      description: "En répondant à quelques questions de la Reine Mère, découvre qui est ta reine intérieure (Cœur, Trèfle, Carreau, Pique). Tu pourras aussi apprendre quelles sont les blessures émotionnelles, ton langage de l'amour et les forces dominantes.",
+      description: "En répondant à quelques questions de la Reine Mère, découvre qui est ta reine intérieure (Cœur, Trèfle, Carreau, Pique). Tu pourras aussi apprendre quelles sont tes blessures émotionnelles, ton langage de l'amour et tes forces dominantes.",
       gradient: "from-imperial-gold via-smoky-gold to-patina-gold"
     },
     {
       icon: <Coffee className="w-12 h-12" />,
       title: "Le Salon de thé",
-      description: "Profite d'un moment privilégié avec la Reine Mère. Échange avec elle pour tout savoir comment mettre un terme à une relation (Flush, Royal) ou pour te désenvouter du charme de ton deux de pique.",
+      description: "Profite d'un moment privilégié avec la Reine Mère. Échange avec elle pour tout savoir sur comment mettre un terme à une relation (Flush, Royal) ou pour te désenvouter du charme de ton deux de pique.",
       gradient: "from-royal-purple via-vintage-aubergine to-inked-indigo"
     }
   ];

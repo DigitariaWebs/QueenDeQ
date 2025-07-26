@@ -393,7 +393,7 @@ const KingdomInvitationModal = ({ onClose }: { onClose: () => void }) => {
           Lancement Officiel de Queen de Q
         </h2>
         <p className="text-center text-rose-champagne italic mb-8">
-          "Le pont-levis descend. Les portes s'ouvrent. Le royaume t'attend."
+          "Le pont-levis descend. Les portes s'ouvrent. Ton royaume t'attend."
         </p>
         <div className="flex flex-col md:flex-row justify-center items-center gap-6 mb-8">
           <div className="flex items-center gap-2 text-imperial-gold">
@@ -422,7 +422,7 @@ const KingdomInvitationModal = ({ onClose }: { onClose: () => void }) => {
         </div>
         <form onSubmit={handleSubmit} className="space-y-4">
           <p className="text-center text-rose-champagne mb-4">
-            Est-ce que t'es prête à révéler ta puissance intérieure?
+            Est-ce que tu es prête à révéler ta puissance intérieure ?
           </p>
           <div className="flex flex-col md:flex-row gap-4">
             <input

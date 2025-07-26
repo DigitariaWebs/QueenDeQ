@@ -398,7 +398,7 @@ export const CouronneCosmique: React.FC<CouronneCosmiqueProps> = ({
           animate={isHovered ? { scale: 1.02 } : { scale: 1 }}
           transition={{ duration: 0.3 }}
         >
-          Chaque reine mérite son univers.
+          Découvre ton univers de reine.
         </motion.h2>
         
         <motion.p 
@@ -406,7 +406,7 @@ export const CouronneCosmique: React.FC<CouronneCosmiqueProps> = ({
           animate={isHovered ? { opacity: 1 } : { opacity: 0.8 }}
           transition={{ duration: 0.3 }}
         >
-          ✨ Touchez la couronne pour révéler votre destinée cosmique ✨
+          ✨ Touchez la couronne pour révéler ta destinée cosmique ✨
         </motion.p>
       </motion.div>
     </div>
