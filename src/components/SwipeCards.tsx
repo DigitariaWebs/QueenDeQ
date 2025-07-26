@@ -149,7 +149,7 @@ const SwipeCards = () => {
       </div>
       
       <div
-        className="w-full place-items-center bg-transparent focus-within:outline-2 focus-within:outline-[#D6AE60] focus-within:outline-offset-2 min-h-[500px] pb-24"
+        className="w-full place-items-center bg-transparent focus-within:outline-2 focus-within:outline-[#D6AE60] focus-within:outline-offset-2 min-h-[60px] pb-24"
         role="application"
         aria-label="Cabinet de cartes interactif"
         tabIndex={0}
@@ -168,34 +168,34 @@ const SwipeCards = () => {
             />
           ))
         ) : ( */}
-          <div className="text-center max-w-2xl mx-auto relative px-4 pb-8">
+          {/* <div className="text-center max-w-2xl mx-auto relative px-4 pb-8"> */}
             {/* Effet de particules dorées */}
-            <div className="absolute inset-0 pointer-events-none">
+            {/* <div className="absolute inset-0 pointer-events-none">
               <div className="absolute top-4 left-8 w-2 h-2 bg-imperial-gold rounded-full animate-pulse opacity-60"></div>
               <div className="absolute top-12 right-12 w-1 h-1 bg-rose-champagne rounded-full animate-pulse opacity-80" style={{ animationDelay: '0.5s' }}></div>
               <div className="absolute bottom-8 left-16 w-1.5 h-1.5 bg-imperial-gold rounded-full animate-pulse opacity-70" style={{ animationDelay: '1s' }}></div>
               <div className="absolute bottom-16 right-8 w-1 h-1 bg-rose-champagne rounded-full animate-pulse opacity-60" style={{ animationDelay: '1.5s' }}></div>
-            </div>
+            </div> */}
 
             {/* Icône mystique centrale */}
-            <div className="relative w-20 h-20 mx-auto mb-6">
+            {/* <div className="relative w-20 h-20 mx-auto mb-6">
               <div className="absolute inset-0 bg-gradient-to-br from-imperial-gold via-yellow-400 to-imperial-gold rounded-full animate-pulse"></div>
               <div className="absolute inset-2 bg-royal-purple rounded-full flex items-center justify-center">
                 <svg className="w-10 h-10 text-imperial-gold" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M12,1L8,5H3L5,9L3,13H8L12,17L16,13H21L19,9L21,5H16L12,1M12,3.441L14.4,5.841H17.241L16.241,8.241L17.241,10.641H14.4L12,13.041L9.6,10.641H6.759L7.759,8.241L6.759,5.841H9.6L12,3.441Z" />
                 </svg>
               </div>
-            </div>
+            </div> */}
 
-            <h3 className="text-3xl md:text-4xl font-cinzel font-bold text-imperial-gold mb-4" dangerouslySetInnerHTML={{ __html: t('swipe.moreCards') }} />
+            {/* <h3 className="text-3xl md:text-4xl font-cinzel font-bold text-imperial-gold mb-4" dangerouslySetInnerHTML={{ __html: t('swipe.moreCards') }} />
             
-            <p className="text-xl text-rose-champagne/90 mb-6 font-raleway leading-relaxed" dangerouslySetInnerHTML={{ __html: t('swipe.cardsExplored') }} />
+            <p className="text-xl text-rose-champagne/90 mb-6 font-raleway leading-relaxed" dangerouslySetInnerHTML={{ __html: t('swipe.cardsExplored') }} /> */}
 
             {/* Comparaison aperçu vs complet */}
-            <div className="bg-royal-purple/30 border border-imperial-gold/30 rounded-xl p-6 mb-8 backdrop-blur-sm">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {/* <div className="bg-royal-purple/30 border border-imperial-gold/30 rounded-xl p-6 mb-8 backdrop-blur-sm">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6"> */}
                 {/* Version aperçu */}
-                <div className="text-center">
+                {/* <div className="text-center">
                   <div className="w-16 h-16 bg-imperial-gold/20 rounded-full flex items-center justify-center mx-auto mb-3">
                     <svg className="w-8 h-8 text-imperial-gold/60" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
@@ -208,10 +208,10 @@ const SwipeCards = () => {
                     <li>• {t('swipe.previewDesc')}</li>
                     <li>• {t('swipe.previewLimited')}</li>
                   </ul>
-                </div>
+                </div> */}
 
                 {/* Version complète */}
-                <div className="text-center">
+                {/* <div className="text-center">
                   <div className="w-16 h-16 bg-gradient-to-br from-imperial-gold via-yellow-400 to-imperial-gold rounded-full flex items-center justify-center mx-auto mb-3">
                     <svg className="w-8 h-8 text-royal-purple" fill="currentColor" viewBox="0 0 24 24">
                       <path d="M12,1L8,5H3L5,9L3,13H8L12,17L16,13H21L19,9L21,5H16L12,1M12,3.441L14.4,5.841H17.241L16.241,8.241L17.241,10.641H14.4L12,13.041L9.6,10.641H6.759L7.759,8.241L6.759,5.841H9.6L12,3.441Z" />
@@ -226,9 +226,9 @@ const SwipeCards = () => {
                   </ul>
                 </div>
               </div>
-            </div>
+            </div> */}
 
-            <div className="bg-gradient-to-r from-imperial-gold/10 to-rose-champagne/10 border border-imperial-gold/40 rounded-xl p-6 mb-8">
+            {/* <div className="bg-gradient-to-r from-imperial-gold/10 to-rose-champagne/10 border border-imperial-gold/40 rounded-xl p-6 mb-8">
               <h4 className="font-cinzel font-bold text-imperial-gold text-lg mb-3" dangerouslySetInnerHTML={{ __html: '🔮 ' + t('swipe.whatToExpect') }} />
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
                 <div className="flex items-start">
@@ -248,7 +248,7 @@ const SwipeCards = () => {
                   <span className="text-rose-champagne/80 font-raleway" dangerouslySetInnerHTML={{ __html: t('swipe.transformRelations') }} />
                 </div>
               </div>
-            </div>
+            </div> */}
 
             {/* <div className="space-y-4">
               <a 
@@ -273,11 +273,11 @@ const SwipeCards = () => {
             </div> */}
 
             {/* Citation inspirante */}
-            <div className="mt-8 pt-6 border-t border-imperial-gold/20">
+            {/* <div className="mt-8 pt-6 border-t border-imperial-gold/20">
               <p className="text-rose-champagne/60 font-raleway text-sm italic" dangerouslySetInnerHTML={{ __html: '"' + t('swipe.quote4') + '"' }} />
               <p className="text-imperial-gold/70 font-cinzel text-xs mt-2" dangerouslySetInnerHTML={{ __html: '— ' + t('swipe.quoteQueen') }} />
             </div>
-          </div>
+          </div> */}
         {/* )} */}
       </div>
     </div>

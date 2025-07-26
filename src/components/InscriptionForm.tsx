@@ -264,8 +264,8 @@ export const InscriptionForm: React.FC<InscriptionFormProps> = ({
                 ) : (
                   <div className="flex items-center justify-center">
                     <Crown className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
-                    <span className="hidden sm:inline">Accédez au Royaume</span>
-                    <span className="sm:hidden">Accéder</span>
+                    <span className="hidden sm:inline">J'accepte de rejoindre le Royaume</span>
+                    <span className="sm:hidden">J'accepte</span>
                     <ExternalLink className="w-3 h-3 sm:w-4 sm:h-4 ml-1 sm:ml-2" />
                   </div>
                 )}

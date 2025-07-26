@@ -210,16 +210,6 @@ export const Hero: React.FC = () => {
                 )}
               </div>
             </div>
-
-            {/* CTA instruction */}
-            <motion.p 
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 1.5 }}
-              className="font-raleway text-sm text-rose-champagne/70"
-            >
-              {t('hero.instruction')}
-            </motion.p>
           </div>
         </div>
         
