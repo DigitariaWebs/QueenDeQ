@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import type { Variants } from 'framer-motion';
 import { Deck3D } from '../components/Deck3D';
-import { CreativeCrown } from '../components/CreativeCrown';
-import { CouronneCosmique } from '../components/CouronneCosmique';
+// import { CreativeCrown } from '../components/CreativeCrown';
+// import { CouronneCosmique } from '../components/CouronneCosmique';
 import { ParticleCanvas } from '../components/ParticleCanvas';
 import { InscriptionForm } from '../components/InscriptionForm';
 import { useSpotsLeft } from '../hooks/useSpotsLeft';
@@ -14,7 +14,7 @@ export const Hero: React.FC = () => {
   const { t, language } = useTranslation();
   const [drawnCard, setDrawnCard] = useState<string>('');
   const [showInscriptionForm, setShowInscriptionForm] = useState(false);
-  const { spotsLeft, isLoading } = useSpotsLeft();
+  // const { spotsLeft, isLoading } = useSpotsLeft();
   const [isDescriptionExpanded, setIsDescriptionExpanded] = useState(false);
 
   const handleCardDraw = (cardName: string) => {
@@ -38,38 +38,38 @@ export const Hero: React.FC = () => {
   const previewText = getPreviewText(fullDescription);
 
   // New creative typography animation variants
-  const textReveal: Variants = {
-    hidden: { 
-      opacity: 0,
-      clipPath: "inset(0 100% 0 0)"
-    },
-    show: { 
-      opacity: 1,
-      clipPath: "inset(0 0% 0 0)",
-      transition: {
-        duration: 0.8,
-        ease: [0.76, 0, 0.24, 1]
-      }
-    }
-  };
+  // const textReveal: Variants = {
+  //   hidden: { 
+  //     opacity: 0,
+  //     clipPath: "inset(0 100% 0 0)"
+  //   },
+  //   show: { 
+  //     opacity: 1,
+  //     clipPath: "inset(0 0% 0 0)",
+  //     transition: {
+  //       duration: 0.8,
+  //       ease: [0.76, 0, 0.24, 1]
+  //     }
+  //   }
+  // };
 
-  const glowEffect: Variants = {
-    hidden: { 
-      opacity: 0,
-      scale: 0.8,
-      filter: "blur(10px)"
-    },
-    show: { 
-      opacity: 1,
-      scale: 1,
-      filter: "blur(0px)",
-      transition: {
-        duration: 0.5,
-        delay: 0.2,
-        ease: "easeOut"
-      }
-    }
-  };
+  // const glowEffect: Variants = {
+  //   hidden: { 
+  //     opacity: 0,
+  //     scale: 0.8,
+  //     filter: "blur(10px)"
+  //   },
+  //   show: { 
+  //     opacity: 1,
+  //     scale: 1,
+  //     filter: "blur(0px)",
+  //     transition: {
+  //       duration: 0.5,
+  //       delay: 0.2,
+  //       ease: "easeOut"
+  //     }
+  //   }
+  // };
 
   const floatingParticles: Variants = {
     hidden: { 
@@ -116,18 +116,17 @@ export const Hero: React.FC = () => {
                 ))}
               </div>
 
-              {/* Main Title - Simplified for font fix */}
-              <div className="mb-8 sm:mb-12 relative overflow-visible" style={{ minHeight: '160px', paddingBottom: '1rem' }}>
+              {/* Main Title - Responsive Centering */}
+              <div className="mb-8 sm:mb-12 relative overflow-visible text-center sm:text-left" style={{ minHeight: '160px', paddingBottom: '1rem' }}>
                 <h1 
-                  className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-transparent bg-gradient-to-br from-imperial-gold via-yellow-300 to-imperial-gold bg-clip-text font-playlist relative"
+                  className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-transparent bg-gradient-to-br from-imperial-gold via-yellow-300 to-imperial-gold bg-clip-text font-playlist relative text-center sm:text-left"
                   style={{ paddingBottom: '0.5em', lineHeight: '1.35', overflow: 'visible' }}
                 >
                   {t('hero.title')}
                 </h1>
-                
                 {/* Glow effect behind title */}
                 <div
-                  className="absolute inset-0 text-4xl sm:text-5xl lg:text-5xl xl:text-6xl font-bold text-imperial-gold/20 blur-lg -z-10 font-playlist"
+                  className="absolute inset-0 text-4xl sm:text-5xl lg:text-5xl xl:text-6xl font-bold text-imperial-gold/20 blur-lg -z-10 font-playlist text-center sm:text-left"
                   style={{ paddingBottom: '0.5em', lineHeight: '1.35', overflow: 'visible' }}
                 >
                   {t('hero.title')}
@@ -137,7 +136,7 @@ export const Hero: React.FC = () => {
               {/* Subtitle with Handwriting Effect */}
               <div className="relative mb-6 sm:mb-8 overflow-hidden" style={{ paddingBottom: '1rem' }}>
                 {/* Container for the handwriting effect */}
-                <div className="relative z-10 flex flex-wrap">
+                <div className="relative z-10 flex flex-wrap justify-center sm:justify-start text-center sm:text-left">
                   {t('hero.subtitle')
                     .split(' ')
                     .map((word, wordIdx) => (
