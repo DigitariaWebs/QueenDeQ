@@ -5,6 +5,7 @@ import { AnimatePresence } from 'framer-motion';
 import { InscriptionForm } from '../components/InscriptionForm';
 import { useTranslation } from '../context/TranslationContext';
 import KingdomInvitation from '../components/KingdomInvitation';
+import { buildApiUrl } from '../config/api';
 
 export const Layout: React.FC = () => {
   const { t } = useTranslation();
@@ -65,7 +66,7 @@ export const Layout: React.FC = () => {
     setContactSuccess(false);
     setContactError(false);
     try {
-      const res = await fetch("http://localhost:5000/api/contact", {
+      const res = await fetch(buildApiUrl("/api/contact"), {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email: contactEmail, message: contactMessage })

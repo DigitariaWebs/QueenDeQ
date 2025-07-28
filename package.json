@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "dev:backend": "cd server && npm start",
     "build": "vite build",
     "build:backend": "cd server && npm install",
     "build:all": "npm run build:backend && npm run build",
