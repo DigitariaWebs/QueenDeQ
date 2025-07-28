@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useTranslation } from '../context/TranslationContext';
 import { AnimatePresence, motion } from 'framer-motion';
+import axios from 'axios';
 
 const KingdomInvitation = () => {
   const { t } = useTranslation();
@@ -40,11 +41,16 @@ const KingdomInvitation = () => {
     };
   }, [isOpen]);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // TODO: Handle email submission
-    console.log('Email submitted:', email);
-    setIsOpen(false);
+    try {
+      await axios.post('http://localhost:5000/api/invite', { email });
+      // Optionally show a success message or close popup
+      setIsOpen(false);
+    } catch (err) {
+      // Optionally show an error message
+      setIsOpen(false);
+    }
   };
 
   return (
