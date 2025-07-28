@@ -1,9 +1,35 @@
 {
-  "framework": "vite",
-  "buildCommand": "npm run build",
-  "installCommand": "npm ci",
+  "version": 2,
+  "builds": [
+    {
+      "src": "server/index.js",
+      "use": "@vercel/node",
+      "config": {
+        "maxDuration": 30
+      }
+    },
+    {
+      "src": "package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "dist",
+        "buildCommand": "npm run build"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "server/index.js"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "dist/$1"
+    }
+  ],
   "env": {
     "NODE_ENV": "production",
     "VITE_BUILD_TARGET": "vercel"
-  }
-} 
+  },
+  "installCommand": "npm ci"
+}
