@@ -1,12 +1,12 @@
 // API Configuration
 const getApiUrl = () => {
-  // In development, use the proxy (relative path)
-  if (import.meta.env.DEV) {
+  // In development and Vercel production, use relative paths
+  if (import.meta.env.DEV || import.meta.env.VITE_BUILD_TARGET === 'vercel') {
     return '';
   }
   
-  // In production, use the full URL
-  return import.meta.env.VITE_API_URL || 'https://your-backend-url.com';
+  // For other production deployments, use the full URL
+  return import.meta.env.VITE_API_URL || '';
 };
 
 export const API_BASE_URL = getApiUrl();

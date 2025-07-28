@@ -29,7 +29,13 @@
   ],
   "env": {
     "NODE_ENV": "production",
-    "VITE_BUILD_TARGET": "vercel"
+    "VITE_BUILD_TARGET": "vercel",
+    "SMTP_HOST": "@smtp_host",
+    "SMTP_PORT": "@smtp_port", 
+    "SMTP_USER": "@smtp_user",
+    "SMTP_PASS": "@smtp_pass",
+    "SMTP_FROM": "@smtp_from",
+    "CONTACT_EMAIL": "@contact_email"
   },
   "installCommand": "npm ci"
 }

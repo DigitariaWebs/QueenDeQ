@@ -1,5 +1,8 @@
 const path = require('path');
-require('dotenv').config({ path: path.resolve(__dirname, '../.env') }); // Load .env from root
+// Load .env from root if it exists (for local development)
+if (process.env.NODE_ENV !== 'production') {
+  require('dotenv').config({ path: path.resolve(__dirname, '../.env') });
+}
 const express = require('express');
 const nodemailer = require('nodemailer');
 const cors = require('cors');
@@ -13,11 +16,33 @@ app.use(cors());
 const inviteRoute = require('./invite');
 app.use(inviteRoute);
 
+// Test endpoint to verify server is working
+app.get('/api/test', (req, res) => {
+  res.json({ 
+    message: 'Server is working!',
+    timestamp: new Date().toISOString(),
+    env: process.env.NODE_ENV
+  });
+});
+
 app.post('/api/contact', async (req, res) => {
+  console.log('Contact form submission received:', { email: req.body.email, hasMessage: !!req.body.message });
+  
   const { email, message } = req.body;
   if (!email || !message) {
+    console.log('Missing email or message');
     return res.status(400).json({ error: 'Email and message are required.' });
   }
+
+  // Log environment variables (without sensitive data)
+  console.log('SMTP Configuration:', {
+    host: process.env.SMTP_HOST ? 'Set' : 'Missing',
+    port: process.env.SMTP_PORT ? 'Set' : 'Missing',
+    user: process.env.SMTP_USER ? 'Set' : 'Missing',
+    pass: process.env.SMTP_PASS ? 'Set' : 'Missing',
+    from: process.env.SMTP_FROM ? 'Set' : 'Missing',
+    contactEmail: process.env.CONTACT_EMAIL ? 'Set' : 'Missing'
+  });
 
   try {
     const transporter = nodemailer.createTransport({
@@ -79,9 +104,15 @@ app.post('/api/contact', async (req, res) => {
       `,
     });
 
+    console.log('Email sent successfully');
     res.json({ success: true });
   } catch (err) {
     console.error('Nodemailer error:', err);
+    console.error('Error details:', {
+      message: err.message,
+      code: err.code,
+      command: err.command
+    });
     res.status(500).json({ error: 'Failed to send email.', details: err.message });
   }
 });
