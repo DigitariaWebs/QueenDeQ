@@ -6,6 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "build:backend": "cd server && npm install",
+    "build:all": "npm run build:backend && npm run build",
     "preview": "vite preview",
     "deploy:live": "./scripts/deploy-live.sh",
     "tunnel": "./scripts/tunnel-options.sh",
