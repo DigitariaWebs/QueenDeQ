@@ -52,6 +52,37 @@ export const Layout: React.FC = () => {
     setShowInscriptionForm(false);
   };
 
+  // Contact form state
+  const [contactEmail, setContactEmail] = useState("");
+  const [contactMessage, setContactMessage] = useState("");
+  const [contactLoading, setContactLoading] = useState(false);
+  const [contactSuccess, setContactSuccess] = useState(false);
+  const [contactError, setContactError] = useState(false);
+
+  const handleContactSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setContactLoading(true);
+    setContactSuccess(false);
+    setContactError(false);
+    try {
+      const res = await fetch("http://localhost:5000/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email: contactEmail, message: contactMessage })
+      });
+      if (res.ok) {
+        setContactSuccess(true);
+        setContactEmail("");
+        setContactMessage("");
+      } else {
+        setContactError(true);
+      }
+    } catch {
+      setContactError(true);
+    }
+    setContactLoading(false);
+  };
+
   return (
     <>
       <KingdomInvitation />
@@ -299,27 +330,42 @@ export const Layout: React.FC = () => {
             {/* Colonne 3 - Contact Form */}
             <div>
               <h3 className="font-cinzel font-bold text-imperial-gold mb-4 text-center md:text-left">{t('footer.contactForm.title')}</h3>
-              <form className="flex flex-col space-y-4">
+              <form className="flex flex-col space-y-4" onSubmit={handleContactSubmit}>
                 <div>
                   <input
                     type="email"
+                    name="contactEmail"
+                    value={contactEmail}
+                    onChange={e => setContactEmail(e.target.value)}
                     placeholder={t('footer.contactForm.email')}
                     className="w-full px-4 py-2 rounded-lg bg-black/30 border border-imperial-gold/30 text-rose-champagne placeholder-rose-champagne/50 focus:outline-none focus:border-imperial-gold transition-colors"
+                    required
                   />
                 </div>
                 <div>
                   <textarea
+                    name="contactMessage"
+                    value={contactMessage}
+                    onChange={e => setContactMessage(e.target.value)}
                     placeholder={t('footer.contactForm.message')}
                     rows={3}
                     className="w-full px-4 py-2 rounded-lg bg-black/30 border border-imperial-gold/30 text-rose-champagne placeholder-rose-champagne/50 focus:outline-none focus:border-imperial-gold transition-colors resize-none"
+                    required
                   ></textarea>
                 </div>
                 <button
                   type="submit"
                   className="w-full px-6 py-2 bg-gradient-to-r from-imperial-gold via-rose-champagne to-imperial-gold rounded-lg text-black font-medium hover:opacity-90 transition-opacity"
+                  disabled={contactLoading}
                 >
-                  {t('footer.contactForm.send')}
+                  {contactLoading ? t('footer.contactForm.sending') : t('footer.contactForm.send')}
                 </button>
+                {contactSuccess && (
+                  <p className="text-green-400 text-sm text-center">{t('footer.contactForm.success')}</p>
+                )}
+                {contactError && (
+                  <p className="text-red-400 text-sm text-center">{t('footer.contactForm.error')}</p>
+                )}
               </form>
             </div>
           </div>
@@ -367,4 +413,4 @@ export const Layout: React.FC = () => {
       </AnimatePresence>
     </>
   );
-}; 
+};

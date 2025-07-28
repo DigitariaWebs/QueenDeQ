@@ -238,7 +238,7 @@ export const InscriptionForm: React.FC<InscriptionFormProps> = ({
                       htmlFor="acceptance"
                       className="text-rose-champagne font-raleway leading-relaxed cursor-pointer text-sm sm:text-base"
                     >
-                      J'accepte de rejoindre la <span className="text-imperial-gold font-semibold">Queen Platform</span> pour accéder à cette expérience exclusive.
+                      J'accepte de rejoindre <span className="text-imperial-gold font-semibold">Le Royaume</span> pour accéder à cette expérience exclusive.
                     </label>
                   </div>
                 </div>

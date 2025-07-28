@@ -182,7 +182,7 @@ export const SuccessOverlay: React.FC<SuccessOverlayProps> = ({ isVisible, onClo
         <div className="relative group animate-cascade-success">
           <button
             onClick={handleClose}
-            className="px-12 py-4 bg-gradient-to-r from-imperial-gold to-yellow-300 hover:from-yellow-300 hover:to-yellow-400 text-royal-purple font-cinzel font-bold py-4 px-8 rounded-lg transition-all duration-500 transform hover:scale-105 shadow-lg hover:shadow-2xl hover:shadow-imperial-gold/30 relative overflow-hidden"
+            className="px-12 py-4 bg-gradient-to-r from-imperial-gold to-yellow-300 hover:from-yellow-300 hover:to-yellow-400 text-royal-purple font-cinzel font-bold rounded-lg transition-all duration-500 transform hover:scale-105 shadow-lg hover:shadow-2xl hover:shadow-imperial-gold/30 relative overflow-hidden"
           >
             {/* Effet de brillance */}
             <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>

@@ -199,6 +199,9 @@ const translations = {
     'footer.contactForm.email': 'Votre email',
     'footer.contactForm.message': 'Votre message',
     'footer.contactForm.send': 'Envoyer',
+    'footer.contactForm.sending': 'Envoi en cours...',
+    'footer.contactForm.success': 'Message envoyé avec succès !',
+    'footer.contactForm.error': 'Échec de l\'envoi du message. Veuillez réessayer.',
     'footer.privacyComingSoon': 'Politique de confidentialité',
     'footer.termsComingSoon': 'Conditions d\'utilisation',
     
@@ -722,6 +725,9 @@ const translations = {
     'footer.contactForm.email': 'Your email',
     'footer.contactForm.message': 'Your message',
     'footer.contactForm.send': 'Send',
+    'footer.contactForm.sending': 'Sending...',
+    'footer.contactForm.success': 'Message sent successfully!',
+    'footer.contactForm.error': 'Failed to send message. Please try again.',
     'footer.privacyComingSoon': 'Privacy Policy',
     'footer.termsComingSoon': 'Terms of Service',
     
