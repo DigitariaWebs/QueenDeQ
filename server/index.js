@@ -1,10 +1,10 @@
-require('dotenv').config();
+const path = require('path');
+require('dotenv').config({ path: path.resolve(__dirname, '../.env') }); // Load .env from root
 const express = require('express');
 const nodemailer = require('nodemailer');
 const cors = require('cors');
 const cron = require('node-cron');
 const fs = require('fs');
-const path = require('path');
 
 const app = express();
 app.use(express.json());
