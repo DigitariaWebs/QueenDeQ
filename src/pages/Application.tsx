@@ -130,27 +130,17 @@ const MysteryCard = ({ icon, title, description, index }: { icon: JSX.Element, t
       >
         {/* Face avant - Titre et icône */}
         <div 
-          className="absolute inset-0 w-full h-full bg-gradient-to-br from-ink-black/80 via-royal-purple/60 to-ink-black/90 backdrop-blur-md rounded-2xl p-6 flex flex-col justify-center items-center text-center gilded-finish backface-hidden border border-imperial-gold/30 shadow-2xl"
+          className="absolute inset-0 w-full h-full rounded-2xl backface-hidden border border-imperial-gold/30 shadow-2xl overflow-hidden"
           style={{ 
             backfaceVisibility: 'hidden',
             WebkitBackfaceVisibility: 'hidden',
-            transform: 'rotateY(0deg)'
+            transform: 'rotateY(0deg)',
+            backgroundImage: `url("${index === 0 ? '/TaPioche.svg' : index === 1 ? '/MiroirMiroir.svg' : '/SalonDeThe.svg'}")`,
+            backgroundSize: 'contain',
+            backgroundPosition: 'center',
+            backgroundRepeat: 'no-repeat'
           }}
-        >
-          <div className="text-imperial-gold mb-4 transform transition-all duration-300 hover:scale-110 hover:text-rose-champagne">
-            {icon}
-          </div>
-          <h4 className="font-playlist text-2xl font-bold text-imperial-gold mb-4 transition-colors duration-300">
-            {title}
-          </h4>
-          <div className="text-rose-champagne/60 text-sm font-raleway italic">
-            Survolez pour découvrir
-          </div>
-          
-          {/* Effet de brillance */}
-          <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-transparent via-imperial-gold/10 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
-        </div>
-
+        ></div>
         {/* Face arrière - Description */}
         <div 
           className="absolute inset-0 w-full h-full bg-gradient-to-br from-imperial-gold/90 via-rose-champagne/90 to-imperial-gold/90 backdrop-blur-md rounded-2xl p-6 flex flex-col justify-center items-center text-center backface-hidden border border-imperial-gold/30 shadow-2xl"
