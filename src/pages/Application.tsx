@@ -250,40 +250,7 @@ export const Application: React.FC = () => {
         </motion.div>
       </section>
 
-      {/* Intro Text Section - The Whispers */}
-      <section className="py-24 px-6 relative bg-gradient-to-b from-ink-black via-vintage-aubergine/20 to-ink-black">
-        <motion.div 
-          className="max-w-3xl mx-auto text-center"
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.5 }}
-          transition={{ duration: 1 }}
-        >
-          <h2 className="font-cinzel text-4xl font-bold text-imperial-gold mb-8">
-            {t('app.intro.title')}
-          </h2>
-          <div className="space-y-6 text-lg md:text-xl leading-relaxed font-raleway text-rose-champagne/80">
-            <p>{t('app.intro.p1')}</p>
-            <p>{t('app.intro.p2')}</p>
-            <p className="text-imperial-gold font-semibold">{t('app.intro.p3')}</p>
-            <div className="mt-8">
-              <h3 
-                className="text-3xl text-imperial-gold font-bold" 
-                style={{ 
-                  fontFamily: 'Playlist, sans-serif',
-                  letterSpacing: '0.05em',
-                  textShadow: '0 0 10px rgba(214, 174, 96, 0.3)'
-                }}
-              >
-                {t('app.intro.p4')}
-              </h3>
-            </div>
-            <p>{t('app.intro.p5')}</p>
-            <p className="text-2xl font-semibold text-rose-champagne">{t('app.intro.p6')}</p>
-            <p className="text-xl font-bold text-imperial-gold mt-8">Télécharge l'application et couronne toi!</p>
-          </div>
-        </motion.div>
-      </section>
+
 
       {/* Features Section - The Rituals */}
       <section className="py-24 px-6 relative bg-ink-black">

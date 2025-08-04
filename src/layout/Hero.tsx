@@ -93,7 +93,7 @@ export const Hero: React.FC = () => {
     <>
       <section id="hero" className="grid lg:grid-cols-[60%_40%] w-screen min-h-screen overflow-hidden">
         {/* LEFT column = headline, CTA, badge */}
-        <div className="relative bg-gradient-to-br from-royal-purple via-royal-purple/95 to-royal-purple/90 flex items-center justify-center p-4 sm:p-8 lg:p-16 pt-24 lg:pt-16">
+        <div className="relative bg-gradient-to-br from-royal-purple via-royal-purple/95 to-royal-purple/90 flex items-center justify-center p-2 pb-0 sm:p-8 lg:p-16 pt-16 lg:pt-16">
           <div className="max-w-2xl w-full mx-auto">
             
             {/* Creative Animated Typography */}
@@ -117,24 +117,24 @@ export const Hero: React.FC = () => {
               </div>
 
               {/* Main Title - Responsive Centering */}
-              <div className="mb-8 sm:mb-12 relative overflow-visible text-center sm:text-left" style={{ minHeight: '160px', paddingBottom: '1rem' }}>
+              <div className="mb-2 sm:mb-8 relative overflow-visible text-center sm:text-left" style={{ minHeight: '100px', paddingBottom: '0.3rem' }}>
                 <h1 
                   className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-transparent bg-gradient-to-br from-imperial-gold via-yellow-300 to-imperial-gold bg-clip-text font-playlist relative text-center sm:text-left"
-                  style={{ paddingBottom: '0.5em', lineHeight: '1.35', overflow: 'visible' }}
+                  style={{ paddingBottom: '0.3em', lineHeight: '1.35', overflow: 'visible' }}
                 >
                   {t('hero.title')}
                 </h1>
                 {/* Glow effect behind title */}
                 <div
                   className="absolute inset-0 text-4xl sm:text-5xl lg:text-5xl xl:text-6xl font-bold text-imperial-gold/20 blur-lg -z-10 font-playlist text-center sm:text-left"
-                  style={{ paddingBottom: '0.5em', lineHeight: '1.35', overflow: 'visible' }}
+                  style={{ paddingBottom: '0.3em', lineHeight: '1.35', overflow: 'visible' }}
                 >
                   {t('hero.title')}
                 </div>
               </div>
 
               {/* Subtitle with Handwriting Effect */}
-              <div className="relative mb-6 sm:mb-8 overflow-hidden" style={{ paddingBottom: '1rem' }}>
+              <div className="relative mb-4 sm:mb-8 overflow-hidden" >
                 {/* Container for the handwriting effect */}
                 <div className="relative z-10 flex flex-wrap justify-center sm:justify-start text-center sm:text-left">
                   {t('hero.subtitle')
@@ -241,7 +241,7 @@ export const Hero: React.FC = () => {
                 src="/logo-gold.png" 
                 alt="Queen de Q Logo" 
                 className="w-48 h-48 object-contain cursor-pointer hover:scale-105 transition-transform duration-300"
-                onClick={() => handleCardDraw('Logo Royal')}
+                onClick={() => window.location.href = '/application'}
               />
             </motion.div>
             
