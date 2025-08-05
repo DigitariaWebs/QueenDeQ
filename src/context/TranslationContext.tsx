@@ -1,20 +1,15 @@
-import { createContext, useContext, useState } from 'react';
+import { createContext, useContext } from 'react';
 import type { ReactNode } from 'react';
 
-// Types
-// Define language type
-type Language = 'fr';
-
 // Define translation type
+type TranslationKey = string;
+
 interface Translations {
-  fr: {
-    [key: string]: string;
-  };
+  [key: string]: string;
 }
 
 // Translations data
-const translations = {
-  fr: {
+const translations: Translations = {
     // Navigation
     'nav.home': 'Accueil',
     'nav.cards': 'Le Cabinet des curiosités',
@@ -540,16 +535,10 @@ const translations = {
     'terms.section17.subsections': '• 17.2. Force majeure : Queen de Q ne pourra être tenue responsable d\'un manquement à ses obligations lorsque celui-ci résulte d\'un événement indépendant de sa volonté, tel qu\'un cas de force majeure, une catastrophe naturelle, une panne d\'infrastructure ou une interruption des réseaux de télécommunications. • 17.3. Divisibilité : Si l\'une quelconque des dispositions des présentes CGU devait être jugée invalide ou inapplicable par un tribunal compétent, les autres dispositions resteront pleinement en vigueur, et la disposition invalide sera réputée remplacée par une clause valide reflétant autant que possible l\'intention initiale. • 17.4. Titres : Les titres et sous-titres des articles sont insérés uniquement pour en faciliter la lecture et n\'ont pas de valeur contractuelle. • 17.5. Règles d\'interprétation : À titre informatif, le singulier comprend le pluriel et vice versa, le masculin comprend le féminin et vice versa, et tout terme désignant une personne comprend également, le cas échéant, une référence aux personnes morales.',
     'terms.section18.title': 'Contact',
     'terms.section18.content': 'Pour toute question, remarque ou réclamation concernant les Services ou les présentes CGU, vous pouvez nous contacter aux coordonnées suivantes :\n\ngestionreines@gmail.com\nou par courrier à :\n9540-9520 Québec Inc.\nÀ l\'attention du Responsable de la protection des renseignements personnels\n275, avenue de Dieppe\nSaint-Hyacinthe (Québec) J2S 6Z7, Canada',
-  }
-};
-
-// Define TranslationKey after translations object is complete
-type TranslationKey = keyof typeof translations.fr;
+  };
 
 // Context
 interface TranslationContextType {
-  language: Language;
-  setLanguage: (lang: Language) => void;
   t: (key: TranslationKey, variables?: Record<string, any>) => string;
 }
 
@@ -561,31 +550,9 @@ interface TranslationProviderProps {
 }
 
 export function TranslationProvider({ children }: TranslationProviderProps) {
-  // Get initial language from localStorage or default to French
-  const getInitialLanguage = (): Language => {
-    try {
-      const saved = localStorage.getItem('queen-q-language');
-      return (saved as Language) || 'fr';
-    } catch {
-      return 'fr';
-    }
-  };
-
-  const [language, setLanguageState] = useState<Language>(getInitialLanguage);
-
-  // Set language and save to localStorage
-  const setLanguage = (lang: Language) => {
-    setLanguageState(lang);
-    try {
-      localStorage.setItem('queen-q-language', lang);
-    } catch (error) {
-      console.warn('Could not save language to localStorage:', error);
-    }
-  };
-
   // Translation function
   const t = (key: TranslationKey, variables?: Record<string, any>): string => {
-    let translation = (translations[language] as Record<TranslationKey, string>)[key] || translations.fr[key] || String(key);
+    let translation = translations[key] || String(key);
     
     // Replace variables in translation
     if (variables) {
@@ -598,7 +565,7 @@ export function TranslationProvider({ children }: TranslationProviderProps) {
   };
 
   return (
-    <TranslationContext.Provider value={{ language, setLanguage, t }}>
+    <TranslationContext.Provider value={{ t }}>
       {children}
     </TranslationContext.Provider>
   );
@@ -611,4 +578,4 @@ export function useTranslation() {
     throw new Error('useTranslation must be used within a TranslationProvider');
   }
   return context;
-} 
+}
