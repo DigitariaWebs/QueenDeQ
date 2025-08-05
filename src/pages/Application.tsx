@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Crown, Sparkles, Heart, Eye, Coffee, Moon, Gift, X } from 'lucide-react';
+import { Crown, Sparkles, Heart, Eye, Coffee, Moon, Gift, X, Gem } from 'lucide-react';
 import { useTranslation } from '../context/TranslationContext';
 import { ParticleCanvas } from '../components/ParticleCanvas';
 import KingdomInvitation from '../components/KingdomInvitation';
@@ -225,28 +225,44 @@ export const Application: React.FC = () => {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1.5, delay: 0.5, ease: "easeOut" }}
         >
-          <Crown className="w-20 h-20 text-imperial-gold mx-auto mb-4 opacity-80" />
-          <h1 className="font-playlist text-6xl md:text-8xl font-bold bg-gradient-to-r from-imperial-gold via-rose-champagne to-imperial-gold bg-clip-text text-transparent mb-4">
-            {t('app.title')}
-          </h1>
-          <motion.h2 
-            className="text-4xl md:text-5xl font-cinzel font-bold text-imperial-gold/80"
-            initial={{ letterSpacing: '0.5em', opacity: 0 }}
-            animate={{ letterSpacing: '0.1em', opacity: 1 }}
-            transition={{ duration: 2, delay: 1, ease: "easeOut" }}
+          <a 
+            href="https://queen-de-q-platform-v2.vercel.app/"
+            rel="noopener noreferrer"
+            className="block transition-transform hover:scale-105"
           >
-            {t('app.subtitle')}
-          </motion.h2>
-        </motion.div>
-        
+            <Crown className="w-20 h-20 text-imperial-gold mx-auto mb-4 opacity-80" />
+            <h1 className="font-playlist text-6xl md:text-8xl font-bold bg-gradient-to-r from-imperial-gold via-rose-champagne to-imperial-gold bg-clip-text text-transparent mb-4">
+              {t('app.title')}
+            </h1>
+            <motion.h2 
+              className="text-4xl md:text-5xl font-cinzel font-bold text-imperial-gold/80"
+              initial={{ letterSpacing: '0.5em', opacity: 0 }}
+              animate={{ letterSpacing: '0.1em', opacity: 1 }}
+              transition={{ duration: 2, delay: 1, ease: "easeOut" }}
+            >
+              {t('app.subtitle')}
+            </motion.h2>
+          </a>
+        </motion.div>  
+
         <motion.div 
-          className="absolute bottom-10 text-imperial-gold/50 animate-bounce"
+          className="flex flex-col items-center gap-8"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 2.5, duration: 1 }}
         >
-          <p className="mb-2 font-raleway">{t('app.scroll')}</p>
-          <Moon className="w-6 h-6 mx-auto" />
+          <a
+            href="https://le-royaume-de-queen-de-q.mn.co/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-8 py-3 mb-6 mt-10 bg-gradient-to-r from-imperial-gold via-rose-champagne to-imperial-gold rounded-lg font-cinzel font-bold text-royal-purple hover:scale-105 transform transition-transform duration-300 shadow-lg shadow-imperial-gold/20"
+          >
+            Le Royaume
+          </a>
+          <div className="text-imperial-gold/50 animate-bounce">
+            <p className="mb-2 font-raleway">{t('app.scroll')}</p>
+            <Moon className="w-6 h-6 mx-auto" />
+          </div>
         </motion.div>
       </section>
 
@@ -281,30 +297,222 @@ export const Application: React.FC = () => {
         </div>
       </section>
 
-      {/* CTA Section - The Invitation */}
-      <section className="py-24 px-6 text-center relative bg-gradient-to-t from-ink-black via-royal-purple/20 to-ink-black">
+      {/* Pricing Section - Royal Plans */}
+      <section className="py-24 px-6 relative bg-gradient-to-t from-ink-black via-royal-purple/20 to-ink-black">
         <CornerOrnament position="top-left" />
         <CornerOrnament position="top-right" />
         <CornerOrnament position="bottom-left" />
         <CornerOrnament position="bottom-right" />
         
         <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: true, amount: 0.5 }}
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 1 }}
+          className="text-center mb-16"
         >
-          <h2 className="font-playlist text-5xl font-bold text-imperial-gold mb-4">{t('app.cta.title')}</h2>
-          <p className="text-xl text-rose-champagne/80 mb-8 max-w-2xl mx-auto font-raleway">{t('app.cta.subtitle')}</p>
-          <motion.button 
-            onClick={() => setShowKingdomModal(true)}
-            className="button-luxury golden-particles text-royal-purple px-10 py-4 rounded-lg font-bold text-xl transition-all duration-300 font-raleway gilded-finish"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
+          <h2 className="font-playlist text-5xl font-bold text-imperial-gold mb-4">Choisis Ton Règne</h2>
+          <p className="text-xl text-rose-champagne/80 mb-8 max-w-3xl mx-auto font-raleway">
+            Trois niveaux de pouvoir pour révéler ta puissance intérieure et maîtriser tes archétypes
+          </p>
+        </motion.div>
+
+        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 relative">
+          {/* Plan Freemium - Court */}
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.8, delay: 0.1 }}
+            className="relative bg-gradient-to-br from-vintage-aubergine/50 via-ink-black/80 to-vintage-aubergine/50 backdrop-blur-xl rounded-2xl p-8 border border-rose-champagne/30 shadow-2xl flex flex-col"
           >
-            <Sparkles className="w-6 h-6 inline mr-2" />
-            {t('app.cta.button')}
-          </motion.button>
+            <div className="text-center mb-6">
+              <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-rose-champagne/30 to-vintage-aubergine/30 rounded-full flex items-center justify-center border border-rose-champagne/50">
+                <Heart className="w-8 h-8 text-rose-champagne" />
+              </div>
+              <h3 className="font-cinzel text-2xl font-bold text-rose-champagne mb-2">Court</h3>
+              <p className="text-rose-champagne/70 text-sm font-raleway">Pour découvrir ton royaume</p>
+            </div>
+            
+            <div className="text-center mb-8">
+              <div className="text-4xl font-bold text-rose-champagne font-cinzel mb-2">Gratuit</div>
+              <p className="text-rose-champagne/60 text-sm font-raleway">Pour toujours</p>
+            </div>
+
+            <ul className="space-y-3 mb-8 flex-grow">
+              <li className="flex items-start text-rose-champagne/80 text-sm font-raleway">
+                <Sparkles className="w-4 h-4 mr-3 text-rose-champagne mt-0.5 flex-shrink-0" />
+                Tirage quotidien d'une carte
+              </li>
+              <li className="flex items-start text-rose-champagne/80 text-sm font-raleway">
+                <Sparkles className="w-4 h-4 mr-3 text-rose-champagne mt-0.5 flex-shrink-0" />
+                Initiation aux 4 Reines
+              </li>
+              <li className="flex items-start text-rose-champagne/80 text-sm font-raleway">
+                <Sparkles className="w-4 h-4 mr-3 text-rose-champagne mt-0.5 flex-shrink-0" />
+                Affirmations royales
+              </li>
+              <li className="flex items-start text-rose-champagne/80 text-sm font-raleway">
+                <Sparkles className="w-4 h-4 mr-3 text-rose-champagne mt-0.5 flex-shrink-0" />
+                Accès communauté de base
+              </li>
+              <li className="flex items-start text-rose-champagne/80 text-sm font-raleway opacity-0 pointer-events-none">
+                <Sparkles className="w-4 h-4 mr-3 text-rose-champagne mt-0.5 flex-shrink-0" />
+                Espace réservé
+              </li>
+              <li className="flex items-start text-rose-champagne/80 text-sm font-raleway opacity-0 pointer-events-none">
+                <Sparkles className="w-4 h-4 mr-3 text-rose-champagne mt-0.5 flex-shrink-0" />
+                Espace réservé
+              </li>
+            </ul>
+
+            <motion.button
+              onClick={() => setShowKingdomModal(true)}
+              className="w-full bg-gradient-to-r from-rose-champagne/20 to-vintage-aubergine/20 text-rose-champagne border border-rose-champagne/30 px-6 py-3 rounded-lg font-bold transition-all duration-300 font-raleway hover:border-rose-champagne/50 hover:bg-rose-champagne/10"
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+            >
+              Commencer Gratuitement
+            </motion.button>
+          </motion.div>
+
+          {/* Plan Diadème - Most Popular */}
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="relative bg-gradient-to-br from-imperial-gold/20 via-royal-purple/80 to-imperial-gold/20 backdrop-blur-xl rounded-2xl p-8 border-2 border-imperial-gold/50 shadow-2xl shadow-imperial-gold/20 transform md:scale-105 flex flex-col"
+          >
+            <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-imperial-gold to-rose-champagne text-royal-purple px-4 py-1 rounded-full text-sm font-bold font-raleway">
+              Le Plus Populaire
+            </div>
+            
+            <div className="text-center mb-6">
+              <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-imperial-gold/30 to-rose-champagne/30 rounded-full flex items-center justify-center border border-imperial-gold/50">
+                <Crown className="w-8 h-8 text-imperial-gold" />
+              </div>
+              <h3 className="font-cinzel text-2xl font-bold text-imperial-gold mb-2">Diadème</h3>
+              <p className="text-imperial-gold/70 text-sm font-raleway">Pour régner avec sagesse</p>
+            </div>
+            
+            <div className="text-center mb-8">
+              <div className="text-4xl font-bold text-imperial-gold font-cinzel mb-2">19,99$</div>
+              <p className="text-imperial-gold/60 text-sm font-raleway">CAD / mois</p>
+            </div>
+
+            <ul className="space-y-3 mb-8 flex-grow">
+              <li className="flex items-start text-rose-champagne/90 text-sm font-raleway">
+                <Sparkles className="w-4 h-4 mr-3 text-imperial-gold mt-0.5 flex-shrink-0" />
+                <strong className="text-imperial-gold">Tout du plan Court +</strong>
+              </li>
+              <li className="flex items-start text-rose-champagne/90 text-sm font-raleway">
+                <Sparkles className="w-4 h-4 mr-3 text-imperial-gold mt-0.5 flex-shrink-0" />
+                Accès aux 54 archétypes masculins
+              </li>
+              <li className="flex items-start text-rose-champagne/90 text-sm font-raleway">
+                <Sparkles className="w-4 h-4 mr-3 text-imperial-gold mt-0.5 flex-shrink-0" />
+                "Miroir Miroir" - Découvre ta Reine
+              </li>
+              <li className="flex items-start text-rose-champagne/90 text-sm font-raleway">
+                <Sparkles className="w-4 h-4 mr-3 text-imperial-gold mt-0.5 flex-shrink-0" />
+                Rituels de désenvoûtement
+              </li>
+              <li className="flex items-start text-rose-champagne/90 text-sm font-raleway">
+                <Sparkles className="w-4 h-4 mr-3 text-imperial-gold mt-0.5 flex-shrink-0" />
+                Journal d'introspection illimité
+              </li>
+              <li className="flex items-start text-rose-champagne/90 text-sm font-raleway">
+                <Sparkles className="w-4 h-4 mr-3 text-imperial-gold mt-0.5 flex-shrink-0" />
+                Cercles sororaux privés
+              </li>
+            </ul>
+
+            <motion.button
+              onClick={() => setShowKingdomModal(true)}
+              className="w-full button-luxury golden-particles text-royal-purple px-6 py-3 rounded-lg font-bold text-lg transition-all duration-300 font-raleway gilded-finish"
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+            >
+              <Crown className="w-5 h-5 inline mr-2" />
+              Recevoir Mon Diadème
+            </motion.button>
+          </motion.div>
+
+          {/* Plan Couronne - Premium */}
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.8, delay: 0.3 }}
+            className="relative bg-gradient-to-br from-royal-purple/50 via-ink-black/80 to-vintage-aubergine/50 backdrop-blur-xl rounded-2xl p-8 border border-royal-purple/50 shadow-2xl flex flex-col"
+          >
+            <div className="text-center mb-6">
+              <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-imperial-gold/30 to-rose-champagne/30 rounded-full flex items-center justify-center border border-imperial-gold/50">
+                <Gem className="w-8 h-8 text-imperial-gold" />
+              </div>
+              <h3 className="font-cinzel text-2xl font-bold text-imperial-gold mb-2">Couronne</h3>
+              <p className="text-rose-champagne/80 text-sm font-raleway">Pour les Reines absolues</p>
+            </div>
+            
+            <div className="text-center mb-8">
+              <div className="text-4xl font-bold text-imperial-gold font-cinzel mb-2">39,99$</div>
+              <p className="text-rose-champagne/70 text-sm font-raleway">CAD / mois</p>
+            </div>
+
+            <ul className="space-y-3 mb-8 flex-grow">
+              <li className="flex items-start text-rose-champagne/90 text-sm font-raleway">
+                <Sparkles className="w-4 h-4 mr-3 text-imperial-gold mt-0.5 flex-shrink-0" />
+                <strong className="text-imperial-gold">Tout du plan Diadème +</strong>
+              </li>
+              <li className="flex items-start text-rose-champagne/90 text-sm font-raleway">
+                <Sparkles className="w-4 h-4 mr-3 text-imperial-gold mt-0.5 flex-shrink-0" />
+                Sessions avec la Reine-Mère (IA)
+              </li>
+              <li className="flex items-start text-rose-champagne/90 text-sm font-raleway">
+                <Sparkles className="w-4 h-4 mr-3 text-imperial-gold mt-0.5 flex-shrink-0" />
+                Analyses personnalisées avancées
+              </li>
+              <li className="flex items-start text-rose-champagne/90 text-sm font-raleway">
+                <Sparkles className="w-4 h-4 mr-3 text-imperial-gold mt-0.5 flex-shrink-0" />
+                Mentorat royal exclusif
+              </li>
+              <li className="flex items-start text-rose-champagne/90 text-sm font-raleway">
+                <Sparkles className="w-4 h-4 mr-3 text-imperial-gold mt-0.5 flex-shrink-0" />
+                Événements VIP du Royaume
+              </li>
+              <li className="flex items-start text-rose-champagne/90 text-sm font-raleway">
+                <Sparkles className="w-4 h-4 mr-3 text-imperial-gold mt-0.5 flex-shrink-0" />
+                Accès anticipé aux nouvelles cartes
+              </li>
+            </ul>
+
+            <motion.button
+              onClick={() => setShowKingdomModal(true)}
+              className="w-full bg-gradient-to-r from-imperial-gold/20 to-rose-champagne/20 text-imperial-gold border border-imperial-gold/40 px-6 py-3 rounded-lg font-bold transition-all duration-300 font-raleway hover:border-imperial-gold/60 hover:bg-imperial-gold/10"
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+            >
+              <Gem className="w-5 h-5 inline mr-2" />
+              Porter Ma Couronne
+            </motion.button>
+          </motion.div>
+        </div>
+
+        {/* Additional Info */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.5 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+          className="text-center mt-12"
+        >
+          <p className="text-rose-champagne/60 text-sm font-raleway mb-4">
+            ✨ Tous les plans incluent un accès à la communauté royale et une garantie satisfaction de 30 jours
+          </p>
+          <p className="text-rose-champagne/50 text-xs font-raleway">
+            Annulation possible à tout moment • Paiement sécurisé • Support royal inclus
+          </p>
         </motion.div>
       </section>
       

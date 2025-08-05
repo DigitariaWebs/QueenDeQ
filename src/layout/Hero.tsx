@@ -241,7 +241,7 @@ export const Hero: React.FC = () => {
                 src="/logo-gold.png" 
                 alt="Queen de Q Logo" 
                 className="w-48 h-48 object-contain cursor-pointer hover:scale-105 transition-transform duration-300"
-                onClick={() => window.location.href = '/application'}
+                onClick={() => window.location.href = '/app'}
               />
             </motion.div>
             

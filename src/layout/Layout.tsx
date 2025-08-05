@@ -128,15 +128,15 @@ export const Layout: React.FC = () => {
                   </li>
                   <li>
                     <Link 
-                      to="/application" 
+                      to="/app" 
                       className={`relative px-2 py-1 font-medium font-raleway ${
-                        location.pathname === '/application' 
+                        location.pathname === '/app' 
                           ? 'text-imperial-gold' 
                           : 'text-rose-champagne hover:text-imperial-gold'
                       } transition-colors`}
                     >
                       <span className="relative z-10 font-raleway">{t('nav.application')}</span>
-                      {location.pathname === '/application' && (
+                      {location.pathname === '/app' && (
                         <span className="absolute bottom-0 left-0 w-full h-0.5 bg-imperial-gold"></span>
                       )}
                     </Link>
@@ -218,9 +218,9 @@ export const Layout: React.FC = () => {
               </li>
               <li>
                 <Link 
-                  to="/application" 
+                  to="/app" 
                   className={`block px-4 py-2 rounded-lg ${
-                    location.pathname === '/application' 
+                    location.pathname === '/app' 
                       ? 'bg-imperial-gold/20 text-imperial-gold' 
                       : 'text-rose-champagne hover:bg-imperial-gold/10 hover:text-imperial-gold'
                   } transition-colors`}
@@ -302,7 +302,7 @@ export const Layout: React.FC = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link to="/application" className="text-rose-champagne hover:text-imperial-gold transition-colors flex items-center justify-center md:justify-start font-raleway">
+                  <Link to="/app" className="text-rose-champagne hover:text-imperial-gold transition-colors flex items-center justify-center md:justify-start font-raleway">
                     <svg className="h-4 w-4 mr-2" viewBox="0 0 24 24" fill="currentColor">
                       <path d="M12 4c-4.42 0-8 3.58-8 8s3.58 8 8 8 8-3.58 8-8-3.58-8-8-8zm0 14c-3.31 0-6-2.69-6-6s2.69-6 6-6 6 2.69 6 6-2.69 6-6 6zm-1-9h2v2h-2zm0 3h2v4h-2z" />
                     </svg>

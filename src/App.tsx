@@ -22,7 +22,7 @@ function App() {
           <Route path="/" element={<Layout />}>
             <Route index element={<Home />} />
             <Route path="cabinet" element={<Cards />} />
-            <Route path="application" element={<Application />} />
+            <Route path="app" element={<Application />} />
             <Route path="apropos" element={<Apropos />} />
             <Route path="politique-confidentialite" element={<PrivacyPolicy />} />
             <Route path="conditions-utilisation" element={<TermsOfService />} />
