@@ -11,7 +11,7 @@ import { useTranslation } from '../context/TranslationContext';
 import { FaChevronDown, FaChevronUp } from 'react-icons/fa';
 
 export const Hero: React.FC = () => {
-  const { t, language } = useTranslation();
+  const { t } = useTranslation();
   const [drawnCard, setDrawnCard] = useState<string>('');
   const [showInscriptionForm, setShowInscriptionForm] = useState(false);
   // const { spotsLeft, isLoading } = useSpotsLeft();
@@ -241,7 +241,7 @@ export const Hero: React.FC = () => {
                 src="/logo-gold.png" 
                 alt="Queen de Q Logo" 
                 className="w-48 h-48 object-contain cursor-pointer hover:scale-105 transition-transform duration-300"
-                onClick={() => window.location.href = '/app'}
+                onClick={() => window.location.href = 'https://queen-de-q-platform-v2.vercel.app/'}
               />
             </motion.div>
             
@@ -259,7 +259,7 @@ export const Hero: React.FC = () => {
                 Découvre ton véritable potentiel et rejoins une sororité de femmes avec qui grandir et partager
               </p>
               <motion.button
-                onClick={() => handleCardDraw('Destinée Royale')}
+                onClick={() => window.location.href = 'https://queen-de-q-platform-v2.vercel.app/'}
                 className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-imperial-gold to-yellow-600 hover:from-yellow-600 hover:to-imperial-gold text-royal-purple font-bold rounded-full transition-all duration-300 transform hover:scale-105 font-raleway"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
