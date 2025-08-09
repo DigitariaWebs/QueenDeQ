@@ -342,32 +342,16 @@ export const Application: React.FC = () => {
             <ul className="space-y-3 mb-8 flex-grow">
               <li className="flex items-start text-rose-champagne/80 text-sm font-raleway">
                 <Sparkles className="w-4 h-4 mr-3 text-rose-champagne mt-0.5 flex-shrink-0" />
-                Tirage quotidien d'une carte
+                Identifier l'archétype de ton homme
               </li>
               <li className="flex items-start text-rose-champagne/80 text-sm font-raleway">
                 <Sparkles className="w-4 h-4 mr-3 text-rose-champagne mt-0.5 flex-shrink-0" />
-                Initiation aux 4 Reines
-              </li>
-              <li className="flex items-start text-rose-champagne/80 text-sm font-raleway">
-                <Sparkles className="w-4 h-4 mr-3 text-rose-champagne mt-0.5 flex-shrink-0" />
-                Affirmations royales
-              </li>
-              <li className="flex items-start text-rose-champagne/80 text-sm font-raleway">
-                <Sparkles className="w-4 h-4 mr-3 text-rose-champagne mt-0.5 flex-shrink-0" />
-                Accès communauté de base
-              </li>
-              <li className="flex items-start text-rose-champagne/80 text-sm font-raleway opacity-0 pointer-events-none">
-                <Sparkles className="w-4 h-4 mr-3 text-rose-champagne mt-0.5 flex-shrink-0" />
-                Espace réservé
-              </li>
-              <li className="flex items-start text-rose-champagne/80 text-sm font-raleway opacity-0 pointer-events-none">
-                <Sparkles className="w-4 h-4 mr-3 text-rose-champagne mt-0.5 flex-shrink-0" />
-                Espace réservé
+                Miroir, Miroir — Découvre ton profil de Reine (♥♦♣♠)
               </li>
             </ul>
 
             <motion.button
-              onClick={() => setShowKingdomModal(true)}
+              onClick={() => (window.location.href = 'https://queen-de-q-platform-v2.vercel.app/')}
               className="w-full bg-gradient-to-r from-rose-champagne/20 to-vintage-aubergine/20 text-rose-champagne border border-rose-champagne/30 px-6 py-3 rounded-lg font-bold transition-all duration-300 font-raleway hover:border-rose-champagne/50 hover:bg-rose-champagne/10"
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
@@ -397,8 +381,8 @@ export const Application: React.FC = () => {
             </div>
             
             <div className="text-center mb-8">
-              <div className="text-4xl font-bold text-imperial-gold font-cinzel mb-2">19,99$</div>
-              <p className="text-imperial-gold/60 text-sm font-raleway">CAD / mois</p>
+              <div className="text-4xl font-bold text-imperial-gold font-cinzel mb-2">$9.99</div>
+              <p className="text-imperial-gold/60 text-sm font-raleway">/ mois</p>
             </div>
 
             <ul className="space-y-3 mb-8 flex-grow">
@@ -408,28 +392,16 @@ export const Application: React.FC = () => {
               </li>
               <li className="flex items-start text-rose-champagne/90 text-sm font-raleway">
                 <Sparkles className="w-4 h-4 mr-3 text-imperial-gold mt-0.5 flex-shrink-0" />
-                Accès aux 54 archétypes masculins
+                Dresse le portrait de ta Queen à travers ses blessures, ses défis et ses forces
               </li>
               <li className="flex items-start text-rose-champagne/90 text-sm font-raleway">
                 <Sparkles className="w-4 h-4 mr-3 text-imperial-gold mt-0.5 flex-shrink-0" />
-                "Miroir Miroir" - Découvre ta Reine
-              </li>
-              <li className="flex items-start text-rose-champagne/90 text-sm font-raleway">
-                <Sparkles className="w-4 h-4 mr-3 text-imperial-gold mt-0.5 flex-shrink-0" />
-                Rituels de désenvoûtement
-              </li>
-              <li className="flex items-start text-rose-champagne/90 text-sm font-raleway">
-                <Sparkles className="w-4 h-4 mr-3 text-imperial-gold mt-0.5 flex-shrink-0" />
-                Journal d'introspection illimité
-              </li>
-              <li className="flex items-start text-rose-champagne/90 text-sm font-raleway">
-                <Sparkles className="w-4 h-4 mr-3 text-imperial-gold mt-0.5 flex-shrink-0" />
-                Cercles sororaux privés
+                Pratique des rituels de déconnexion avec un mec
               </li>
             </ul>
 
             <motion.button
-              onClick={() => setShowKingdomModal(true)}
+              onClick={() => (window.location.href = 'https://queen-de-q-platform-v2.vercel.app/')}
               className="w-full button-luxury golden-particles text-royal-purple px-6 py-3 rounded-lg font-bold text-lg transition-all duration-300 font-raleway gilded-finish"
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
@@ -456,8 +428,8 @@ export const Application: React.FC = () => {
             </div>
             
             <div className="text-center mb-8">
-              <div className="text-4xl font-bold text-imperial-gold font-cinzel mb-2">39,99$</div>
-              <p className="text-rose-champagne/70 text-sm font-raleway">CAD / mois</p>
+              <div className="text-4xl font-bold text-imperial-gold font-cinzel mb-2">$19.99</div>
+              <p className="text-rose-champagne/70 text-sm font-raleway">/ mois</p>
             </div>
 
             <ul className="space-y-3 mb-8 flex-grow">
@@ -467,28 +439,28 @@ export const Application: React.FC = () => {
               </li>
               <li className="flex items-start text-rose-champagne/90 text-sm font-raleway">
                 <Sparkles className="w-4 h-4 mr-3 text-imperial-gold mt-0.5 flex-shrink-0" />
-                Sessions avec la Reine-Mère (IA)
+                Initie-toi à des rituels de connexion avec toi-même
               </li>
               <li className="flex items-start text-rose-champagne/90 text-sm font-raleway">
                 <Sparkles className="w-4 h-4 mr-3 text-imperial-gold mt-0.5 flex-shrink-0" />
-                Analyses personnalisées avancées
+                Discussion avec la Reine Mère (à venir)
               </li>
               <li className="flex items-start text-rose-champagne/90 text-sm font-raleway">
                 <Sparkles className="w-4 h-4 mr-3 text-imperial-gold mt-0.5 flex-shrink-0" />
-                Mentorat royal exclusif
+                Une communauté de Queens qui se soutiennent, s'entraide, grandissent et s'épanouissent
               </li>
               <li className="flex items-start text-rose-champagne/90 text-sm font-raleway">
                 <Sparkles className="w-4 h-4 mr-3 text-imperial-gold mt-0.5 flex-shrink-0" />
-                Événements VIP du Royaume
+                À venir: Interprétation des rêves, Parcours de Couronnement, Analyses des red flags
               </li>
               <li className="flex items-start text-rose-champagne/90 text-sm font-raleway">
                 <Sparkles className="w-4 h-4 mr-3 text-imperial-gold mt-0.5 flex-shrink-0" />
-                Accès anticipé aux nouvelles cartes
+                À venir: Podcast « Tatouée », Queen Marketplace, Conférences & évènements
               </li>
             </ul>
 
             <motion.button
-              onClick={() => setShowKingdomModal(true)}
+              onClick={() => (window.location.href = 'https://queen-de-q-platform-v2.vercel.app/')}
               className="w-full bg-gradient-to-r from-imperial-gold/20 to-rose-champagne/20 text-imperial-gold border border-imperial-gold/40 px-6 py-3 rounded-lg font-bold transition-all duration-300 font-raleway hover:border-imperial-gold/60 hover:bg-imperial-gold/10"
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
@@ -508,7 +480,7 @@ export const Application: React.FC = () => {
           className="text-center mt-12"
         >
           <p className="text-rose-champagne/60 text-sm font-raleway mb-4">
-            ✨ Tous les plans incluent un accès à la communauté royale et une garantie satisfaction de 30 jours
+            ✨ La communauté du Royaume est incluse avec le plan Couronne. Garantie satisfaction de 30 jours.
           </p>
           <p className="text-rose-champagne/50 text-xs font-raleway">
             Annulation possible à tout moment • Paiement sécurisé • Support royal inclus
@@ -609,4 +581,4 @@ const KingdomInvitationModal = ({ onClose }: { onClose: () => void }) => {
       </div>
     </motion.div>
   );
-}; 
+};
