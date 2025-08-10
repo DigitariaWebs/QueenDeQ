@@ -19,12 +19,11 @@
       "dest": "server/index.js"
     },
     {
-      "src": "/(.*\\.(?:js|css|png|jpg|jpeg|gif|svg|ico|woff|woff2|ttf|eot|map|json))",
-      "dest": "dist/$1"
+      "handle": "filesystem"
     },
     {
       "src": "/.*",
-      "dest": "dist/index.html"
+      "dest": "/index.html"
     }
   ],
   "env": {
