@@ -252,12 +252,12 @@ export const Application: React.FC = () => {
           transition={{ delay: 2.5, duration: 1 }}
         >
           <a
-            href="https://le-royaume-de-queen-de-q.mn.co/"
+            href="https://queen-de-q-platform-v2.vercel.app/"
             target="_blank"
             rel="noopener noreferrer"
             className="px-8 py-3 mb-6 mt-10 bg-gradient-to-r from-imperial-gold via-rose-champagne to-imperial-gold rounded-lg font-cinzel font-bold text-royal-purple hover:scale-105 transform transition-transform duration-300 shadow-lg shadow-imperial-gold/20"
           >
-            Le Royaume
+            Entrez
           </a>
           <div className="text-imperial-gold/50 animate-bounce">
             <p className="mb-2 font-raleway">{t('app.scroll')}</p>
@@ -318,7 +318,7 @@ export const Application: React.FC = () => {
         </motion.div>
 
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 relative">
-          {/* Plan Freemium - Court */}
+          {/* Plan Freemium - Tiare */}
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -330,7 +330,7 @@ export const Application: React.FC = () => {
               <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-rose-champagne/30 to-vintage-aubergine/30 rounded-full flex items-center justify-center border border-rose-champagne/50">
                 <Heart className="w-8 h-8 text-rose-champagne" />
               </div>
-              <h3 className="font-cinzel text-2xl font-bold text-rose-champagne mb-2">Court</h3>
+              <h3 className="font-cinzel text-2xl font-bold text-rose-champagne mb-2">Tiare</h3>
               <p className="text-rose-champagne/70 text-sm font-raleway">Pour découvrir ton royaume</p>
             </div>
             
