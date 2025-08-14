@@ -257,7 +257,7 @@ export const Application: React.FC = () => {
             rel="noopener noreferrer"
             className="px-8 py-3 mb-6 mt-10 bg-gradient-to-r from-imperial-gold via-rose-champagne to-imperial-gold rounded-lg font-cinzel font-bold text-royal-purple hover:scale-105 transform transition-transform duration-300 shadow-lg shadow-imperial-gold/20"
           >
-            Entrez
+            Entrer
           </a>
           <div className="text-imperial-gold/50 animate-bounce">
             <p className="mb-2 font-raleway">{t('app.scroll')}</p>
